@@ -1,0 +1,152 @@
+<mxfile host="app.diagrams.net" modified="2026-07-19T00:00:00.000Z" agent="Claude" version="24.7.17" type="device">
+  <diagram name="iTransformer WQI Architecture" id="wqi-arch-horizontal">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ============ SECTION HEADERS ============ -->
+        <mxCell id="hdr1" value="STEP 1: Data Preparation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f4e79;strokeColor=#1f4e79;fontStyle=1;fontSize=14;align=center;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr2" value="STEP 2: iTransformer Prediction Model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f4e79;strokeColor=#1f4e79;fontStyle=1;fontSize=14;align=center;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="340" y="20" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr3" value="STEP 3: Prediction &amp; Evaluation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f4e79;strokeColor=#1f4e79;fontStyle=1;fontSize=14;align=center;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="620" y="20" width="440" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ============ SECTION 1: DATA PREPARATION ============ -->
+        <mxCell id="s1_dataset" value="River Water Quality Dataset&#10;(CPCB Ganga Monitoring Data)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#1a1a1a;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_collect" value="Data Collection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="150" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_param" value="Parameter Extraction&#10;• DO   • pH   • BOD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="205" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_clean" value="Data Cleaning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_missing" value="Handle Missing Values" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="325" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_bdl" value="Handle BDL Values" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_feat" value="Feature Selection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="435" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_slide" value="Sliding Window (12 Months)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="490" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_scale" value="Data Normalization (StandardScaler)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="545" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_train" value="Training Dataset&#10;(2019–2024)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="600" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_test" value="Testing Dataset&#10;(2025)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="160" y="600" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ============ SECTION 2: iTRANSFORMER MODEL ============ -->
+        <mxCell id="s2_embed" value="Input Embedding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfe2f3;strokeColor=#6c8ebf;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="340" y="250" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_encoder" value="Transformer Encoder" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b4c7e7;strokeColor=#4472c4;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="340" y="315" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_attn" value="Multi-Head Self Attention" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9dc3e6;strokeColor=#2e75b6;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="340" y="380" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_ffn" value="Feed Forward Network" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8faadc;strokeColor=#1f4e79;fontSize=11;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="340" y="445" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_out" value="Output Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6fa8dc;strokeColor=#0b5394;fontSize=11;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="340" y="510" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ============ SECTION 3: PREDICTION & EVALUATION ============ -->
+        <mxCell id="s3_pred25" value="2025 Prediction&#10;(DO, pH, BOD)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="620" y="250" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_fore26" value="2026 Forecasting&#10;(Recursive Prediction)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="860" y="250" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_wqi" value="WQI Calculation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="700" y="330" width="280" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_class" value="Water Quality Classification&#10;Excellent | Good | Medium | Poor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="700" y="400" width="280" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_perf" value="Performance Evaluation&#10;MAE  •  RMSE  •  R² Score" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="620" y="475" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_vis" value="Visualization&#10;Actual vs Predicted, Monthly Forecast, WQI Trend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="860" y="475" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_final" value="Final Output&#10;Predicted DO, pH, BOD, WQI, Category — 2026 Report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="700" y="565" width="280" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- ============ EDGES: SECTION 1 (straight vertical chain) ============ -->
+        <mxCell id="e1" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;" edge="1" parent="1" source="s1_dataset" target="s1_collect"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" parent="1" source="s1_collect" target="s1_param"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" parent="1" source="s1_param" target="s1_clean"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" parent="1" source="s1_clean" target="s1_missing"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" parent="1" source="s1_missing" target="s1_bdl"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" parent="1" source="s1_bdl" target="s1_feat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" parent="1" source="s1_feat" target="s1_slide"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" parent="1" source="s1_slide" target="s1_scale"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.3;exitY=1;entryX=0.5;entryY=0;strokeColor=#6c8ebf;" edge="1" parent="1" source="s1_scale" target="s1_train"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.7;exitY=1;entryX=0.5;entryY=0;strokeColor=#6c8ebf;" edge="1" parent="1" source="s1_scale" target="s1_test"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ============ EDGES: SECTION 1 -> SECTION 2 (clean right-angle, routed through empty gap between columns) ============ -->
+        <mxCell id="e11" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.3;strokeColor=#6c8ebf;" edge="1" parent="1" source="s1_train" target="s2_embed"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.7;strokeColor=#6c8ebf;" edge="1" parent="1" source="s1_test" target="s2_embed"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ============ EDGES: SECTION 2 (model stack, straight vertical) ============ -->
+        <mxCell id="e13" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#4472c4;" edge="1" parent="1" source="s2_embed" target="s2_encoder"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e14" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#2e75b6;" edge="1" parent="1" source="s2_encoder" target="s2_attn"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e15" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#1f4e79;" edge="1" parent="1" source="s2_attn" target="s2_ffn"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e16" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#0b5394;" edge="1" parent="1" source="s2_ffn" target="s2_out"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ============ EDGES: SECTION 2 -> SECTION 3 (clean right-angle, routed through empty gap) ============ -->
+        <mxCell id="e17" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#9673a6;" edge="1" parent="1" source="s2_out" target="s3_pred25"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e18" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.7;entryX=0;entryY=0.5;strokeColor=#9673a6;" edge="1" parent="1" source="s2_out" target="s3_fore26"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ============ EDGES: SECTION 3 (results panel, straight) ============ -->
+        <mxCell id="e19" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.3;entryY=0;strokeColor=#9673a6;" edge="1" parent="1" source="s3_pred25" target="s3_wqi"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e20" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.7;entryY=0;strokeColor=#9673a6;" edge="1" parent="1" source="s3_fore26" target="s3_wqi"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e21" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#9673a6;" edge="1" parent="1" source="s3_wqi" target="s3_class"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e22" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.3;exitY=1;entryX=0.5;entryY=0;strokeColor=#d6b656;" edge="1" parent="1" source="s3_class" target="s3_perf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e23" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.7;exitY=1;entryX=0.5;entryY=0;strokeColor=#d6b656;" edge="1" parent="1" source="s3_class" target="s3_vis"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e24" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.3;entryY=0;strokeColor=#82b366;" edge="1" parent="1" source="s3_perf" target="s3_final"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e25" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.7;entryY=0;strokeColor=#82b366;" edge="1" parent="1" source="s3_vis" target="s3_final"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
