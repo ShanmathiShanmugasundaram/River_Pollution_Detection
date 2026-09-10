@@ -1,0 +1,486 @@
+State,Location,Year,Season,Saprobic_Score,Biological_Quality
+BIHAR,Buxer D/S,2022-23,Post,5.1,Good
+BIHAR,Buxer D/S,2023-24,Post,4.4,Moderate
+BIHAR,Buxer D/S,2023-24,Pre,4.8,Moderate
+BIHAR,Buxer D/S,2024-25,Post,4.8,Moderate
+BIHAR,Buxer D/S,2024-25,Pre,5.3,Good
+BIHAR,Buxer U/S,2022-23,Post,4.8,Moderate
+BIHAR,Buxer U/S,2023-24,Post,4.7,Moderate
+BIHAR,Buxer U/S,2023-24,Pre,4.9,Moderate
+BIHAR,Buxer U/S,2024-25,Post,4.9,Moderate
+BIHAR,Buxer U/S,2024-25,Pre,5.1,Good
+BIHAR,"Digha Ghat, Patna",2017-18,Post,5.3,Good
+BIHAR,"Digha Ghat, Patna",2017-18,Pre,4.9,Moderate
+BIHAR,"Digha Ghat, Patna",2018-19,Post,5.7,Good
+BIHAR,"Digha Ghat, Patna",2018-19,Pre,5.6,Good
+BIHAR,"Digha Ghat, Patna",2019-20,Post,5.9,Good
+BIHAR,"Digha Ghat, Patna",2019-20,Pre,5.6,Good
+BIHAR,"Digha Ghat, Patna",2020-21,Post,4.8,Moderate
+BIHAR,"Digha Ghat, Patna",2021-22,Post,5.3,Good
+BIHAR,"Digha Ghat, Patna",2022-23,Post,5.2,Good
+BIHAR,"Digha Ghat, Patna",2022-23,Pre,5.5,Good
+BIHAR,"Digha Ghat, Patna",2023-24,Post,5.0,Good
+BIHAR,"Digha Ghat, Patna",2023-24,Pre,4.4,Moderate
+BIHAR,"Digha Ghat, Patna",2024-25,Post,4.9,Moderate
+BIHAR,"Digha Ghat, Patna",2024-25,Pre,5.4,Good
+BIHAR,Gandhi Ghat,2017-18,Post,5.2,Good
+BIHAR,Gandhi Ghat,2017-18,Pre,5.1,Good
+BIHAR,Gandhi Ghat,2018-19,Post,4.9,Moderate
+BIHAR,Gandhi Ghat,2018-19,Pre,5.3,Good
+BIHAR,Gandhi Ghat,2019-20,Post,4.9,Moderate
+BIHAR,Gandhi Ghat,2019-20,Pre,5.2,Good
+BIHAR,Gandhi Ghat,2020-21,Post,4.6,Moderate
+BIHAR,Gandhi Ghat,2021-22,Post,4.7,Moderate
+BIHAR,Gandhi Ghat,2022-23,Post,5.3,Good
+BIHAR,Gandhi Ghat,2022-23,Pre,5.5,Good
+BIHAR,Gandhi Ghat,2023-24,Post,4.8,Moderate
+BIHAR,Gandhi Ghat,2023-24,Pre,5.1,Good
+BIHAR,Gandhi Ghat,2024-25,Post,5.0,Good
+BIHAR,Gandhi Ghat,2024-25,Pre,5.0,Good
+BIHAR,Kangan Ghat Malsalami,2017-18,Post,4.8,Moderate
+BIHAR,Kangan Ghat Malsalami,2017-18,Pre,4.5,Moderate
+BIHAR,Kangan Ghat Malsalami,2018-19,Post,6.0,Good
+BIHAR,Kangan Ghat Malsalami,2018-19,Pre,5.0,Good
+BIHAR,Kangan Ghat Malsalami,2019-20,Pre,4.9,Moderate
+BIHAR,Kangan Ghat Malsalami,2020-21,Post,4.8,Moderate
+BIHAR,Kangan Ghat Malsalami,2021-22,Post,5.1,Good
+BIHAR,Kangan Ghat Malsalami,2022-23,Post,5.1,Good
+BIHAR,Kangan Ghat Malsalami,2022-23,Pre,5.6,Good
+BIHAR,Kangan Ghat Malsalami,2023-24,Post,5.3,Good
+BIHAR,Kangan Ghat Malsalami,2023-24,Pre,4.9,Moderate
+BIHAR,Kangan Ghat Malsalami,2024-25,Post,4.8,Moderate
+BIHAR,Kangan Ghat Malsalami,2024-25,Pre,5.6,Good
+BIHAR,Kewala Ghat Fatuha,2017-18,Post,4.6,Moderate
+BIHAR,Kewala Ghat Fatuha,2017-18,Pre,5.2,Good
+BIHAR,Kewala Ghat Fatuha,2018-19,Post,5.1,Good
+BIHAR,Kewala Ghat Fatuha,2018-19,Pre,5.4,Good
+BIHAR,Kewala Ghat Fatuha,2019-20,Post,5.1,Good
+BIHAR,Kewala Ghat Fatuha,2019-20,Pre,5.2,Good
+BIHAR,Kewala Ghat Fatuha,2020-21,Post,4.8,Moderate
+BIHAR,Kewala Ghat Fatuha,2021-22,Post,5.3,Good
+BIHAR,Kewala Ghat Fatuha,2022-23,Post,5.1,Good
+BIHAR,Kewala Ghat Fatuha,2022-23,Pre,5.3,Good
+BIHAR,Kewala Ghat Fatuha,2023-24,Post,4.6,Moderate
+BIHAR,Kewala Ghat Fatuha,2023-24,Pre,4.5,Moderate
+BIHAR,Kewala Ghat Fatuha,2024-25,Post,4.8,Moderate
+BIHAR,Kewala Ghat Fatuha,2024-25,Pre,4.8,Moderate
+JHARKHAND,Rajmahal,2023-24,Post,5.1,Good
+JHARKHAND,Rajmahal,2023-24,Pre,5.0,Good
+JHARKHAND,Rajmahal,2024-25,Post,4.8,Moderate
+JHARKHAND,Rajmahal,2024-25,Pre,5.2,Good
+JHARKHAND,Sahibganj,2023-24,Post,4.8,Moderate
+JHARKHAND,Sahibganj,2023-24,Pre,4.9,Moderate
+JHARKHAND,Sahibganj,2024-25,Post,4.4,Moderate
+JHARKHAND,Sahibganj,2024-25,Pre,5.1,Good
+UTTAR PRADESH,Anupsahar,2017-18,Post,5.3,Good
+UTTAR PRADESH,Anupsahar,2017-18,Pre,5.0,Good
+UTTAR PRADESH,Anupsahar,2018-19,Post,5.2,Good
+UTTAR PRADESH,Anupsahar,2018-19,Pre,5.0,Good
+UTTAR PRADESH,Anupsahar,2019-20,Post,0.0,Unknown
+UTTAR PRADESH,Anupsahar,2019-20,Pre,4.8,Moderate
+UTTAR PRADESH,Anupsahar,2020-21,Post,5.3,Good
+UTTAR PRADESH,Anupsahar,2021-22,Post,4.8,Moderate
+UTTAR PRADESH,Anupsahar,2022-23,Pre,4.9,Moderate
+UTTAR PRADESH,Anupsahar,2023-24,Post,4.8,Moderate
+UTTAR PRADESH,Anupsahar,2023-24,Pre,5.1,Good
+UTTAR PRADESH,Anupsahar,2024-25,Post,5.2,Good
+UTTAR PRADESH,Anupsahar,2024-25,Pre,4.9,Moderate
+UTTAR PRADESH,"Asni Village, Fatehpur",2017-18,Post,4.4,Moderate
+UTTAR PRADESH,"Asni Village, Fatehpur",2017-18,Pre,5.0,Good
+UTTAR PRADESH,"Asni Village, Fatehpur",2018-19,Post,5.5,Good
+UTTAR PRADESH,"Asni Village, Fatehpur",2018-19,Pre,5.5,Good
+UTTAR PRADESH,"Asni Village, Fatehpur",2019-20,Post,5.5,Good
+UTTAR PRADESH,"Asni Village, Fatehpur",2019-20,Pre,4.7,Moderate
+UTTAR PRADESH,"Asni Village, Fatehpur",2020-21,Post,4.9,Moderate
+UTTAR PRADESH,"Asni Village, Fatehpur",2021-22,Post,4.3,Moderate
+UTTAR PRADESH,"Asni Village, Fatehpur",2022-23,Post,4.8,Moderate
+UTTAR PRADESH,"Asni Village, Fatehpur",2022-23,Pre,5.0,Good
+UTTAR PRADESH,"Asni Village, Fatehpur",2023-24,Post,5.1,Good
+UTTAR PRADESH,"Asni Village, Fatehpur",2023-24,Pre,5.0,Good
+UTTAR PRADESH,"Asni Village, Fatehpur",2024-25,Post,5.2,Good
+UTTAR PRADESH,"Asni Village, Fatehpur",2024-25,Pre,5.3,Good
+UTTAR PRADESH,Bithoor,2017-18,Post,5.4,Good
+UTTAR PRADESH,Bithoor,2017-18,Pre,5.5,Good
+UTTAR PRADESH,Bithoor,2018-19,Post,4.7,Moderate
+UTTAR PRADESH,Bithoor,2018-19,Pre,4.9,Moderate
+UTTAR PRADESH,Bithoor,2019-20,Post,5.3,Good
+UTTAR PRADESH,Bithoor,2019-20,Pre,4.8,Moderate
+UTTAR PRADESH,Bithoor,2020-21,Post,4.8,Moderate
+UTTAR PRADESH,Bithoor,2021-22,Post,5.3,Good
+UTTAR PRADESH,Bithoor,2022-23,Post,4.7,Moderate
+UTTAR PRADESH,Bithoor,2022-23,Pre,4.7,Moderate
+UTTAR PRADESH,Bithoor,2023-24,Post,4.5,Moderate
+UTTAR PRADESH,Bithoor,2023-24,Pre,5.3,Good
+UTTAR PRADESH,Bithoor,2024-25,Post,5.0,Good
+UTTAR PRADESH,Bithoor,2024-25,Pre,4.8,Moderate
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2017-18,Post,4.7,Moderate
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2017-18,Pre,5.2,Good
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2018-19,Post,4.0,Moderate
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2018-19,Pre,5.2,Good
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2019-20,Post,5.3,Good
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2020-21,Post,5.4,Good
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2021-22,Post,5.0,Good
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2022-23,Post,5.0,Good
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2022-23,Pre,4.8,Moderate
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2023-24,Post,5.4,Good
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2023-24,Pre,4.7,Moderate
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2024-25,Pre,5.4,Good
+UTTAR PRADESH,"Deorighat, Kanpur",2017-18,Post,4.7,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2017-18,Pre,4.7,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2018-19,Post,4.6,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2018-19,Pre,4.9,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2019-20,Post,4.8,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2019-20,Pre,4.7,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2020-21,Post,5.2,Good
+UTTAR PRADESH,"Deorighat, Kanpur",2021-22,Post,5.3,Good
+UTTAR PRADESH,"Deorighat, Kanpur",2022-23,Post,4.9,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2022-23,Pre,4.8,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2023-24,Post,4.6,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2023-24,Pre,4.9,Moderate
+UTTAR PRADESH,"Deorighat, Kanpur",2024-25,Post,5.2,Good
+UTTAR PRADESH,"Deorighat, Kanpur",2024-25,Pre,4.7,Moderate
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2017-18,Post,4.7,Moderate
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2017-18,Pre,4.7,Moderate
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2018-19,Post,5.3,Good
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2018-19,Pre,4.8,Moderate
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2019-20,Post,5.1,Good
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2019-20,Pre,4.7,Moderate
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2020-21,Post,5.0,Good
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2021-22,Post,4.8,Moderate
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2022-23,Post,5.1,Good
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2022-23,Pre,5.1,Good
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2023-24,Post,5.4,Good
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2023-24,Pre,5.3,Good
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2024-25,Post,4.9,Moderate
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2024-25,Pre,5.0,Good
+UTTAR PRADESH,"Jajmau, Kanpur",2017-18,Post,4.7,Moderate
+UTTAR PRADESH,"Jajmau, Kanpur",2018-19,Post,5.6,Good
+UTTAR PRADESH,"Jajmau, Kanpur",2018-19,Pre,5.7,Good
+UTTAR PRADESH,"Jajmau, Kanpur",2019-20,Post,4.9,Moderate
+UTTAR PRADESH,"Jajmau, Kanpur",2019-20,Pre,5.3,Good
+UTTAR PRADESH,"Jajmau, Kanpur",2020-21,Post,4.7,Moderate
+UTTAR PRADESH,"Jajmau, Kanpur",2021-22,Post,5.3,Good
+UTTAR PRADESH,"Jajmau, Kanpur",2022-23,Post,4.0,Moderate
+UTTAR PRADESH,"Jajmau, Kanpur",2022-23,Pre,4.9,Moderate
+UTTAR PRADESH,"Jajmau, Kanpur",2023-24,Post,4.7,Moderate
+UTTAR PRADESH,"Jajmau, Kanpur",2023-24,Pre,4.9,Moderate
+UTTAR PRADESH,"Jajmau, Kanpur",2024-25,Post,4.6,Moderate
+UTTAR PRADESH,"Jajmau, Kanpur",2024-25,Pre,5.3,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2017-18,Post,4.7,Moderate
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2017-18,Pre,5.2,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2018-19,Post,5.2,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2018-19,Pre,5.4,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2019-20,Post,0.0,Unknown
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2019-20,Pre,5.3,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2020-21,Post,4.9,Moderate
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2021-22,Post,4.9,Moderate
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2022-23,Post,5.0,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2022-23,Pre,5.4,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2023-24,Post,5.4,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2023-24,Pre,5.4,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2024-25,Post,5.1,Good
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2024-25,Pre,5.0,Good
+UTTAR PRADESH,Kannauj D/S,2017-18,Post,4.6,Moderate
+UTTAR PRADESH,Kannauj D/S,2017-18,Pre,6.0,Good
+UTTAR PRADESH,Kannauj D/S,2018-19,Post,5.0,Good
+UTTAR PRADESH,Kannauj D/S,2018-19,Pre,5.5,Good
+UTTAR PRADESH,Kannauj D/S,2019-20,Post,5.6,Good
+UTTAR PRADESH,Kannauj D/S,2019-20,Pre,5.5,Good
+UTTAR PRADESH,Kannauj D/S,2020-21,Post,5.3,Good
+UTTAR PRADESH,Kannauj D/S,2021-22,Post,5.0,Good
+UTTAR PRADESH,Kannauj D/S,2022-23,Post,4.8,Moderate
+UTTAR PRADESH,Kannauj D/S,2022-23,Pre,4.6,Moderate
+UTTAR PRADESH,Kannauj D/S,2023-24,Post,5.5,Good
+UTTAR PRADESH,Kannauj D/S,2023-24,Pre,4.9,Moderate
+UTTAR PRADESH,Kannauj D/S,2024-25,Post,5.6,Good
+UTTAR PRADESH,Kannauj D/S,2024-25,Pre,5.1,Good
+UTTAR PRADESH,Madhya Ganga Barrage,2017-18,Post,4.3,Moderate
+UTTAR PRADESH,Madhya Ganga Barrage,2017-18,Pre,5.4,Good
+UTTAR PRADESH,Madhya Ganga Barrage,2018-19,Post,5.4,Good
+UTTAR PRADESH,Madhya Ganga Barrage,2018-19,Pre,5.4,Good
+UTTAR PRADESH,Madhya Ganga Barrage,2019-20,Post,4.9,Moderate
+UTTAR PRADESH,Madhya Ganga Barrage,2019-20,Pre,4.8,Moderate
+UTTAR PRADESH,Madhya Ganga Barrage,2020-21,Post,5.0,Good
+UTTAR PRADESH,Madhya Ganga Barrage,2021-22,Post,4.6,Moderate
+UTTAR PRADESH,Madhya Ganga Barrage,2022-23,Post,4.6,Moderate
+UTTAR PRADESH,Madhya Ganga Barrage,2022-23,Pre,4.7,Moderate
+UTTAR PRADESH,Madhya Ganga Barrage,2023-24,Post,4.8,Moderate
+UTTAR PRADESH,Madhya Ganga Barrage,2023-24,Pre,5.2,Good
+UTTAR PRADESH,Madhya Ganga Barrage,2024-25,Post,4.8,Moderate
+UTTAR PRADESH,Madhya Ganga Barrage,2024-25,Pre,4.9,Moderate
+UTTAR PRADESH,Narora,2017-18,Post,4.3,Moderate
+UTTAR PRADESH,Narora,2017-18,Pre,5.2,Good
+UTTAR PRADESH,Narora,2018-19,Post,5.4,Good
+UTTAR PRADESH,Narora,2018-19,Pre,5.1,Good
+UTTAR PRADESH,Narora,2019-20,Post,4.4,Moderate
+UTTAR PRADESH,Narora,2019-20,Pre,5.0,Good
+UTTAR PRADESH,Narora,2020-21,Post,5.0,Good
+UTTAR PRADESH,Narora,2021-22,Post,4.2,Moderate
+UTTAR PRADESH,Narora,2022-23,Post,4.7,Moderate
+UTTAR PRADESH,Narora,2022-23,Pre,4.9,Moderate
+UTTAR PRADESH,Narora,2023-24,Post,5.1,Good
+UTTAR PRADESH,Narora,2023-24,Pre,4.8,Moderate
+UTTAR PRADESH,Narora,2024-25,Pre,4.6,Moderate
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2017-18,Post,5.1,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2017-18,Pre,6.1,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2018-19,Post,5.5,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2018-19,Pre,5.5,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2019-20,Post,4.7,Moderate
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2019-20,Pre,5.1,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2020-21,Post,5.3,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2021-22,Post,6.0,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2022-23,Post,5.3,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2022-23,Pre,5.2,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2023-24,Post,4.6,Moderate
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2023-24,Pre,4.9,Moderate
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2024-25,Post,6.0,Good
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2024-25,Pre,4.9,Moderate
+UTTAR PRADESH,Prayagraj D/S,2017-18,Post,5.1,Good
+UTTAR PRADESH,Prayagraj D/S,2017-18,Pre,5.1,Good
+UTTAR PRADESH,Prayagraj D/S,2018-19,Post,6.1,Good
+UTTAR PRADESH,Prayagraj D/S,2018-19,Pre,5.2,Good
+UTTAR PRADESH,Prayagraj D/S,2019-20,Post,5.4,Good
+UTTAR PRADESH,Prayagraj D/S,2019-20,Pre,5.8,Good
+UTTAR PRADESH,Prayagraj D/S,2020-21,Post,5.5,Good
+UTTAR PRADESH,Prayagraj D/S,2021-22,Post,5.6,Good
+UTTAR PRADESH,Prayagraj D/S,2022-23,Post,5.0,Good
+UTTAR PRADESH,Prayagraj D/S,2022-23,Pre,4.8,Moderate
+UTTAR PRADESH,Prayagraj D/S,2023-24,Post,6.3,Good
+UTTAR PRADESH,Prayagraj D/S,2023-24,Pre,5.1,Good
+UTTAR PRADESH,Prayagraj D/S,2024-25,Post,5.5,Good
+UTTAR PRADESH,Prayagraj D/S,2024-25,Pre,4.9,Moderate
+UTTAR PRADESH,Rajwari A/C Gomti,2017-18,Post,5.1,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2017-18,Pre,5.4,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2018-19,Post,4.7,Moderate
+UTTAR PRADESH,Rajwari A/C Gomti,2018-19,Pre,5.1,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2019-20,Post,5.1,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2019-20,Pre,6.0,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2020-21,Post,5.2,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2021-22,Post,5.4,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2022-23,Post,4.9,Moderate
+UTTAR PRADESH,Rajwari A/C Gomti,2022-23,Pre,4.9,Moderate
+UTTAR PRADESH,Rajwari A/C Gomti,2023-24,Post,5.1,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2023-24,Pre,5.1,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2024-25,Post,5.1,Good
+UTTAR PRADESH,Rajwari A/C Gomti,2024-25,Pre,5.6,Good
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2017-18,Post,5.1,Good
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2017-18,Pre,5.2,Good
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2018-19,Post,4.0,Moderate
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2018-19,Pre,4.6,Moderate
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2019-20,Post,4.5,Moderate
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2019-20,Pre,4.8,Moderate
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2020-21,Post,5.0,Good
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2021-22,Post,5.8,Good
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2022-23,Post,4.3,Moderate
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2022-23,Pre,4.8,Moderate
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2023-24,Post,4.7,Moderate
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2023-24,Pre,4.7,Moderate
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2024-25,Post,5.4,Good
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2024-25,Pre,4.3,Moderate
+UTTAR PRADESH,"Sirsa, Tamas D/S",2017-18,Post,5.4,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2017-18,Pre,5.1,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2018-19,Post,5.6,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2018-19,Pre,5.4,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2019-20,Post,5.6,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2019-20,Pre,6.0,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2020-21,Post,5.6,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2021-22,Post,5.1,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2022-23,Post,4.8,Moderate
+UTTAR PRADESH,"Sirsa, Tamas D/S",2022-23,Pre,5.0,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2023-24,Post,5.5,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2023-24,Pre,4.8,Moderate
+UTTAR PRADESH,"Sirsa, Tamas D/S",2024-25,Post,5.2,Good
+UTTAR PRADESH,"Sirsa, Tamas D/S",2024-25,Pre,5.3,Good
+UTTAR PRADESH,Varanasi D/S,2017-18,Post,5.0,Good
+UTTAR PRADESH,Varanasi D/S,2017-18,Pre,4.7,Moderate
+UTTAR PRADESH,Varanasi D/S,2018-19,Post,6.1,Good
+UTTAR PRADESH,Varanasi D/S,2018-19,Pre,5.2,Good
+UTTAR PRADESH,Varanasi D/S,2019-20,Post,4.9,Moderate
+UTTAR PRADESH,Varanasi D/S,2019-20,Pre,6.6,Good
+UTTAR PRADESH,Varanasi D/S,2020-21,Post,4.8,Moderate
+UTTAR PRADESH,Varanasi D/S,2021-22,Post,5.3,Good
+UTTAR PRADESH,Varanasi D/S,2022-23,Post,4.9,Moderate
+UTTAR PRADESH,Varanasi D/S,2022-23,Pre,5.2,Good
+UTTAR PRADESH,Varanasi D/S,2023-24,Post,5.3,Good
+UTTAR PRADESH,Varanasi D/S,2023-24,Pre,5.4,Good
+UTTAR PRADESH,Varanasi D/S,2024-25,Post,5.8,Good
+UTTAR PRADESH,Varanasi D/S,2024-25,Pre,5.7,Good
+UTTAR PRADESH,Varanasi U/S,2017-18,Post,4.7,Moderate
+UTTAR PRADESH,Varanasi U/S,2017-18,Pre,4.9,Moderate
+UTTAR PRADESH,Varanasi U/S,2018-19,Post,5.3,Good
+UTTAR PRADESH,Varanasi U/S,2018-19,Pre,5.6,Good
+UTTAR PRADESH,Varanasi U/S,2019-20,Post,5.3,Good
+UTTAR PRADESH,Varanasi U/S,2019-20,Pre,6.1,Good
+UTTAR PRADESH,Varanasi U/S,2020-21,Post,5.3,Good
+UTTAR PRADESH,Varanasi U/S,2021-22,Post,5.1,Good
+UTTAR PRADESH,Varanasi U/S,2022-23,Post,4.3,Moderate
+UTTAR PRADESH,Varanasi U/S,2022-23,Pre,4.9,Moderate
+UTTAR PRADESH,Varanasi U/S,2023-24,Post,5.2,Good
+UTTAR PRADESH,Varanasi U/S,2023-24,Pre,6.1,Good
+UTTAR PRADESH,Varanasi U/S,2024-25,Post,5.0,Good
+UTTAR PRADESH,Varanasi U/S,2024-25,Pre,5.4,Good
+UTTARAKHAND,Gangotri,2022-23,Post,8.5,Very Good
+UTTARAKHAND,Gangotri,2023-24,Post,6.8,Good
+UTTARAKHAND,Gangotri,2023-24,Pre,7.4,Very Good
+UTTARAKHAND,Gangotri,2024-25,Post,6.1,Good
+UTTARAKHAND,Gangotri,2024-25,Pre,8.0,Very Good
+UTTARAKHAND,Haridwar Barrage,2017-18,Post,7.3,Very Good
+UTTARAKHAND,Haridwar Barrage,2017-18,Pre,7.2,Very Good
+UTTARAKHAND,Haridwar Barrage,2018-19,Post,5.0,Good
+UTTARAKHAND,Haridwar Barrage,2018-19,Pre,5.1,Good
+UTTARAKHAND,Haridwar Barrage,2019-20,Post,5.8,Good
+UTTARAKHAND,Haridwar Barrage,2019-20,Pre,6.2,Good
+UTTARAKHAND,Haridwar Barrage,2020-21,Post,5.4,Good
+UTTARAKHAND,Haridwar Barrage,2021-22,Post,5.8,Good
+UTTARAKHAND,Haridwar Barrage,2022-23,Post,5.4,Good
+UTTARAKHAND,Haridwar Barrage,2022-23,Pre,5.1,Good
+UTTARAKHAND,Haridwar Barrage,2023-24,Post,6.2,Good
+UTTARAKHAND,Haridwar Barrage,2023-24,Pre,5.0,Good
+UTTARAKHAND,Haridwar Barrage,2024-25,Post,6.2,Good
+UTTARAKHAND,Haridwar Barrage,2024-25,Pre,5.1,Good
+UTTARAKHAND,Harsil,2022-23,Post,8.0,Very Good
+UTTARAKHAND,Harsil,2023-24,Post,6.3,Good
+UTTARAKHAND,Harsil,2023-24,Pre,6.2,Good
+UTTARAKHAND,Harsil,2024-25,Post,6.5,Good
+UTTARAKHAND,Harsil,2024-25,Pre,6.2,Good
+UTTARAKHAND,Jagjeetpur D/S,2017-18,Post,2.3,Poor
+UTTARAKHAND,Jagjeetpur D/S,2017-18,Pre,5.8,Good
+UTTARAKHAND,Jagjeetpur D/S,2018-19,Post,2.6,Poor
+UTTARAKHAND,Jagjeetpur D/S,2018-19,Pre,2.3,Poor
+UTTARAKHAND,Jagjeetpur D/S,2019-20,Post,3.7,Moderate
+UTTARAKHAND,Jagjeetpur D/S,2019-20,Pre,3.1,Moderate
+UTTARAKHAND,Jagjeetpur D/S,2020-21,Post,5.6,Good
+UTTARAKHAND,Jagjeetpur D/S,2021-22,Post,3.5,Moderate
+UTTARAKHAND,Jagjeetpur D/S,2022-23,Post,3.8,Moderate
+UTTARAKHAND,Jagjeetpur D/S,2022-23,Pre,3.8,Moderate
+UTTARAKHAND,Jagjeetpur D/S,2023-24,Post,4.5,Moderate
+UTTARAKHAND,Jagjeetpur D/S,2023-24,Pre,4.1,Moderate
+UTTARAKHAND,Jagjeetpur D/S,2024-25,Post,4.2,Moderate
+UTTARAKHAND,Jagjeetpur D/S,2024-25,Pre,4.8,Moderate
+UTTARAKHAND,Jagjeetpur U/S,2017-18,Post,5.9,Good
+UTTARAKHAND,Jagjeetpur U/S,2017-18,Pre,6.2,Good
+UTTARAKHAND,Jagjeetpur U/S,2018-19,Post,4.8,Moderate
+UTTARAKHAND,Jagjeetpur U/S,2018-19,Pre,4.8,Moderate
+UTTARAKHAND,Jagjeetpur U/S,2019-20,Post,5.6,Good
+UTTARAKHAND,Jagjeetpur U/S,2019-20,Pre,5.5,Good
+UTTARAKHAND,Jagjeetpur U/S,2020-21,Post,6.2,Good
+UTTARAKHAND,Jagjeetpur U/S,2021-22,Post,6.0,Good
+UTTARAKHAND,Jagjeetpur U/S,2022-23,Post,4.9,Moderate
+UTTARAKHAND,Jagjeetpur U/S,2022-23,Pre,5.8,Good
+UTTARAKHAND,Jagjeetpur U/S,2023-24,Post,5.5,Good
+UTTARAKHAND,Jagjeetpur U/S,2023-24,Pre,4.9,Moderate
+UTTARAKHAND,Jagjeetpur U/S,2024-25,Post,3.0,Moderate
+UTTARAKHAND,Uttarkashi D/S,2023-24,Post,6.3,Good
+UTTARAKHAND,Uttarkashi D/S,2023-24,Pre,4.5,Moderate
+UTTARAKHAND,Uttarkashi D/S,2024-25,Post,7.2,Very Good
+UTTARAKHAND,Uttarkashi D/S,2024-25,Pre,6.1,Good
+UTTARAKHAND,Uttarkashi U/S,2023-24,Post,7.1,Very Good
+UTTARAKHAND,Uttarkashi U/S,2024-25,Post,7.0,Very Good
+UTTARAKHAND,Uttarkashi U/S,2024-25,Pre,7.1,Very Good
+WEST BENGAL,Ballykhal,2017-18,Post,4.9,Moderate
+WEST BENGAL,Ballykhal,2017-18,Pre,5.2,Good
+WEST BENGAL,Ballykhal,2018-19,Pre,5.5,Good
+WEST BENGAL,Ballykhal,2019-20,Post,6.0,Good
+WEST BENGAL,Ballykhal,2019-20,Pre,5.2,Good
+WEST BENGAL,Ballykhal,2020-21,Post,5.3,Good
+WEST BENGAL,Ballykhal,2021-22,Post,4.8,Moderate
+WEST BENGAL,Ballykhal,2022-23,Post,5.3,Good
+WEST BENGAL,Ballykhal,2022-23,Pre,4.8,Moderate
+WEST BENGAL,Ballykhal,2023-24,Post,5.1,Good
+WEST BENGAL,Ballykhal,2023-24,Pre,5.7,Good
+WEST BENGAL,Ballykhal,2024-25,Post,4.3,Moderate
+WEST BENGAL,Ballykhal,2024-25,Pre,4.9,Moderate
+WEST BENGAL,Beharampore U/S,2017-18,Post,4.2,Moderate
+WEST BENGAL,Beharampore U/S,2017-18,Pre,5.6,Good
+WEST BENGAL,Beharampore U/S,2018-19,Pre,5.2,Good
+WEST BENGAL,Beharampore U/S,2019-20,Post,5.0,Good
+WEST BENGAL,Beharampore U/S,2019-20,Pre,5.9,Good
+WEST BENGAL,Beharampore U/S,2020-21,Post,4.5,Moderate
+WEST BENGAL,Beharampore U/S,2021-22,Post,4.8,Moderate
+WEST BENGAL,Beharampore U/S,2022-23,Post,4.9,Moderate
+WEST BENGAL,Beharampore U/S,2022-23,Pre,5.9,Good
+WEST BENGAL,Beharampore U/S,2023-24,Post,5.2,Good
+WEST BENGAL,Beharampore U/S,2023-24,Pre,6.0,Good
+WEST BENGAL,Beharampore U/S,2024-25,Post,4.7,Moderate
+WEST BENGAL,Beharampore U/S,2024-25,Pre,5.3,Good
+WEST BENGAL,Behrampore D/S,2017-18,Post,5.6,Good
+WEST BENGAL,Behrampore D/S,2017-18,Pre,5.7,Good
+WEST BENGAL,Behrampore D/S,2018-19,Pre,5.0,Good
+WEST BENGAL,Behrampore D/S,2019-20,Post,5.3,Good
+WEST BENGAL,Behrampore D/S,2019-20,Pre,5.5,Good
+WEST BENGAL,Behrampore D/S,2020-21,Post,4.8,Moderate
+WEST BENGAL,Behrampore D/S,2021-22,Post,5.0,Good
+WEST BENGAL,Behrampore D/S,2022-23,Post,4.6,Moderate
+WEST BENGAL,Behrampore D/S,2022-23,Pre,5.5,Good
+WEST BENGAL,Behrampore D/S,2023-24,Post,5.1,Good
+WEST BENGAL,Behrampore D/S,2023-24,Pre,5.1,Good
+WEST BENGAL,Behrampore D/S,2024-25,Post,5.0,Good
+WEST BENGAL,Behrampore D/S,2024-25,Pre,6.1,Good
+WEST BENGAL,Belgharia,2017-18,Post,4.9,Moderate
+WEST BENGAL,Belgharia,2017-18,Pre,5.4,Good
+WEST BENGAL,Belgharia,2018-19,Pre,5.5,Good
+WEST BENGAL,Belgharia,2019-20,Post,4.6,Moderate
+WEST BENGAL,Belgharia,2019-20,Pre,4.9,Moderate
+WEST BENGAL,Belgharia,2020-21,Post,4.2,Moderate
+WEST BENGAL,Belgharia,2021-22,Post,4.6,Moderate
+WEST BENGAL,Belgharia,2022-23,Post,5.3,Good
+WEST BENGAL,Belgharia,2022-23,Pre,4.9,Moderate
+WEST BENGAL,Belgharia,2023-24,Post,5.1,Good
+WEST BENGAL,Belgharia,2023-24,Pre,5.5,Good
+WEST BENGAL,Belgharia,2024-25,Post,4.2,Moderate
+WEST BENGAL,Belgharia,2024-25,Pre,4.8,Moderate
+WEST BENGAL,Garden Reach,2017-18,Post,5.2,Good
+WEST BENGAL,Garden Reach,2017-18,Pre,6.0,Good
+WEST BENGAL,Garden Reach,2018-19,Pre,5.3,Good
+WEST BENGAL,Garden Reach,2019-20,Post,4.9,Moderate
+WEST BENGAL,Garden Reach,2020-21,Post,5.2,Good
+WEST BENGAL,Garden Reach,2021-22,Post,4.6,Moderate
+WEST BENGAL,Garden Reach,2022-23,Post,5.3,Good
+WEST BENGAL,Garden Reach,2022-23,Pre,5.6,Good
+WEST BENGAL,Garden Reach,2023-24,Post,4.2,Moderate
+WEST BENGAL,Garden Reach,2023-24,Pre,5.3,Good
+WEST BENGAL,Garden Reach,2024-25,Post,5.3,Good
+WEST BENGAL,Garden Reach,2024-25,Pre,4.7,Moderate
+WEST BENGAL,Howrah Bridge,2017-18,Post,5.6,Good
+WEST BENGAL,Howrah Bridge,2017-18,Pre,6.0,Good
+WEST BENGAL,Howrah Bridge,2018-19,Pre,6.0,Good
+WEST BENGAL,Howrah Bridge,2019-20,Post,4.8,Moderate
+WEST BENGAL,Howrah Bridge,2019-20,Pre,6.0,Good
+WEST BENGAL,Howrah Bridge,2020-21,Post,4.4,Moderate
+WEST BENGAL,Howrah Bridge,2021-22,Post,4.9,Moderate
+WEST BENGAL,Howrah Bridge,2022-23,Post,5.0,Good
+WEST BENGAL,Howrah Bridge,2023-24,Post,5.2,Good
+WEST BENGAL,Howrah Bridge,2023-24,Pre,4.7,Moderate
+WEST BENGAL,Howrah Bridge,2024-25,Post,4.8,Moderate
+WEST BENGAL,Howrah Bridge,2024-25,Pre,5.2,Good
+WEST BENGAL,Kharda Khal D/S,2017-18,Post,5.1,Good
+WEST BENGAL,Kharda Khal D/S,2017-18,Pre,6.3,Good
+WEST BENGAL,Kharda Khal D/S,2018-19,Pre,5.4,Good
+WEST BENGAL,Kharda Khal D/S,2019-20,Post,5.0,Good
+WEST BENGAL,Kharda Khal D/S,2019-20,Pre,4.4,Moderate
+WEST BENGAL,Kharda Khal D/S,2020-21,Post,5.4,Good
+WEST BENGAL,Kharda Khal D/S,2021-22,Post,4.6,Moderate
+WEST BENGAL,Kharda Khal D/S,2022-23,Post,4.9,Moderate
+WEST BENGAL,Kharda Khal D/S,2022-23,Pre,5.0,Good
+WEST BENGAL,Kharda Khal D/S,2023-24,Post,4.8,Moderate
+WEST BENGAL,Kharda Khal D/S,2023-24,Pre,5.3,Good
+WEST BENGAL,Kharda Khal D/S,2024-25,Post,4.2,Moderate
+WEST BENGAL,Kharda Khal D/S,2024-25,Pre,5.9,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2017-18,Post,4.8,Moderate
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2017-18,Pre,5.4,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2018-19,Pre,5.3,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2019-20,Post,5.4,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2019-20,Pre,5.2,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2020-21,Post,5.2,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2021-22,Post,5.0,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2022-23,Post,5.0,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2022-23,Pre,5.1,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2023-24,Post,5.2,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2023-24,Pre,4.9,Moderate
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2024-25,Post,5.2,Good
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2024-25,Pre,4.6,Moderate
+WEST BENGAL,Srerampore,2022-23,Post,4.7,Moderate
+WEST BENGAL,Srerampore,2023-24,Post,4.4,Moderate
+WEST BENGAL,Srerampore,2023-24,Pre,4.7,Moderate
+WEST BENGAL,Srerampore,2024-25,Post,4.8,Moderate
+WEST BENGAL,Srerampore,2024-25,Pre,4.5,Moderate

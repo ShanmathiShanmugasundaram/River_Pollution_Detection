@@ -1,0 +1,486 @@
+State,Location,Year,Season,Saprobic_Score
+BIHAR,Buxer D/S,2022-23,Post,5.1
+BIHAR,Buxer D/S,2023-24,Post,4.4
+BIHAR,Buxer D/S,2023-24,Pre,4.8
+BIHAR,Buxer D/S,2024-25,Post,4.8
+BIHAR,Buxer D/S,2024-25,Pre,5.3
+BIHAR,Buxer U/S,2022-23,Post,4.8
+BIHAR,Buxer U/S,2023-24,Post,4.7
+BIHAR,Buxer U/S,2023-24,Pre,4.9
+BIHAR,Buxer U/S,2024-25,Post,4.9
+BIHAR,Buxer U/S,2024-25,Pre,5.1
+BIHAR,"Digha Ghat, Patna",2017-18,Post,5.3
+BIHAR,"Digha Ghat, Patna",2017-18,Pre,4.9
+BIHAR,"Digha Ghat, Patna",2018-19,Post,5.7
+BIHAR,"Digha Ghat, Patna",2018-19,Pre,5.6
+BIHAR,"Digha Ghat, Patna",2019-20,Post,5.9
+BIHAR,"Digha Ghat, Patna",2019-20,Pre,5.6
+BIHAR,"Digha Ghat, Patna",2020-21,Post,4.8
+BIHAR,"Digha Ghat, Patna",2021-22,Post,5.3
+BIHAR,"Digha Ghat, Patna",2022-23,Post,5.2
+BIHAR,"Digha Ghat, Patna",2022-23,Pre,5.5
+BIHAR,"Digha Ghat, Patna",2023-24,Post,5.0
+BIHAR,"Digha Ghat, Patna",2023-24,Pre,4.4
+BIHAR,"Digha Ghat, Patna",2024-25,Post,4.9
+BIHAR,"Digha Ghat, Patna",2024-25,Pre,5.4
+BIHAR,Gandhi Ghat,2017-18,Post,5.2
+BIHAR,Gandhi Ghat,2017-18,Pre,5.1
+BIHAR,Gandhi Ghat,2018-19,Post,4.9
+BIHAR,Gandhi Ghat,2018-19,Pre,5.3
+BIHAR,Gandhi Ghat,2019-20,Post,4.9
+BIHAR,Gandhi Ghat,2019-20,Pre,5.2
+BIHAR,Gandhi Ghat,2020-21,Post,4.6
+BIHAR,Gandhi Ghat,2021-22,Post,4.7
+BIHAR,Gandhi Ghat,2022-23,Post,5.3
+BIHAR,Gandhi Ghat,2022-23,Pre,5.5
+BIHAR,Gandhi Ghat,2023-24,Post,4.8
+BIHAR,Gandhi Ghat,2023-24,Pre,5.1
+BIHAR,Gandhi Ghat,2024-25,Post,5.0
+BIHAR,Gandhi Ghat,2024-25,Pre,5.0
+BIHAR,Kangan Ghat Malsalami,2017-18,Post,4.8
+BIHAR,Kangan Ghat Malsalami,2017-18,Pre,4.5
+BIHAR,Kangan Ghat Malsalami,2018-19,Post,6.0
+BIHAR,Kangan Ghat Malsalami,2018-19,Pre,5.0
+BIHAR,Kangan Ghat Malsalami,2019-20,Pre,4.9
+BIHAR,Kangan Ghat Malsalami,2020-21,Post,4.8
+BIHAR,Kangan Ghat Malsalami,2021-22,Post,5.1
+BIHAR,Kangan Ghat Malsalami,2022-23,Post,5.1
+BIHAR,Kangan Ghat Malsalami,2022-23,Pre,5.6
+BIHAR,Kangan Ghat Malsalami,2023-24,Post,5.3
+BIHAR,Kangan Ghat Malsalami,2023-24,Pre,4.9
+BIHAR,Kangan Ghat Malsalami,2024-25,Post,4.8
+BIHAR,Kangan Ghat Malsalami,2024-25,Pre,5.6
+BIHAR,Kewala Ghat Fatuha,2017-18,Post,4.6
+BIHAR,Kewala Ghat Fatuha,2017-18,Pre,5.2
+BIHAR,Kewala Ghat Fatuha,2018-19,Post,5.1
+BIHAR,Kewala Ghat Fatuha,2018-19,Pre,5.4
+BIHAR,Kewala Ghat Fatuha,2019-20,Post,5.1
+BIHAR,Kewala Ghat Fatuha,2019-20,Pre,5.2
+BIHAR,Kewala Ghat Fatuha,2020-21,Post,4.8
+BIHAR,Kewala Ghat Fatuha,2021-22,Post,5.3
+BIHAR,Kewala Ghat Fatuha,2022-23,Post,5.1
+BIHAR,Kewala Ghat Fatuha,2022-23,Pre,5.3
+BIHAR,Kewala Ghat Fatuha,2023-24,Post,4.6
+BIHAR,Kewala Ghat Fatuha,2023-24,Pre,4.5
+BIHAR,Kewala Ghat Fatuha,2024-25,Post,4.8
+BIHAR,Kewala Ghat Fatuha,2024-25,Pre,4.8
+JHARKHAND,Rajmahal,2023-24,Post,5.1
+JHARKHAND,Rajmahal,2023-24,Pre,5.0
+JHARKHAND,Rajmahal,2024-25,Post,4.8
+JHARKHAND,Rajmahal,2024-25,Pre,5.2
+JHARKHAND,Sahibganj,2023-24,Post,4.8
+JHARKHAND,Sahibganj,2023-24,Pre,4.9
+JHARKHAND,Sahibganj,2024-25,Post,4.4
+JHARKHAND,Sahibganj,2024-25,Pre,5.1
+UTTAR PRADESH,Anupsahar,2017-18,Post,5.3
+UTTAR PRADESH,Anupsahar,2017-18,Pre,5.0
+UTTAR PRADESH,Anupsahar,2018-19,Post,5.2
+UTTAR PRADESH,Anupsahar,2018-19,Pre,5.0
+UTTAR PRADESH,Anupsahar,2019-20,Post,0.0
+UTTAR PRADESH,Anupsahar,2019-20,Pre,4.8
+UTTAR PRADESH,Anupsahar,2020-21,Post,5.3
+UTTAR PRADESH,Anupsahar,2021-22,Post,4.8
+UTTAR PRADESH,Anupsahar,2022-23,Pre,4.9
+UTTAR PRADESH,Anupsahar,2023-24,Post,4.8
+UTTAR PRADESH,Anupsahar,2023-24,Pre,5.1
+UTTAR PRADESH,Anupsahar,2024-25,Post,5.2
+UTTAR PRADESH,Anupsahar,2024-25,Pre,4.9
+UTTAR PRADESH,"Asni Village, Fatehpur",2017-18,Post,4.4
+UTTAR PRADESH,"Asni Village, Fatehpur",2017-18,Pre,5.0
+UTTAR PRADESH,"Asni Village, Fatehpur",2018-19,Post,5.5
+UTTAR PRADESH,"Asni Village, Fatehpur",2018-19,Pre,5.5
+UTTAR PRADESH,"Asni Village, Fatehpur",2019-20,Post,5.5
+UTTAR PRADESH,"Asni Village, Fatehpur",2019-20,Pre,4.7
+UTTAR PRADESH,"Asni Village, Fatehpur",2020-21,Post,4.9
+UTTAR PRADESH,"Asni Village, Fatehpur",2021-22,Post,4.3
+UTTAR PRADESH,"Asni Village, Fatehpur",2022-23,Post,4.8
+UTTAR PRADESH,"Asni Village, Fatehpur",2022-23,Pre,5.0
+UTTAR PRADESH,"Asni Village, Fatehpur",2023-24,Post,5.1
+UTTAR PRADESH,"Asni Village, Fatehpur",2023-24,Pre,5.0
+UTTAR PRADESH,"Asni Village, Fatehpur",2024-25,Post,5.2
+UTTAR PRADESH,"Asni Village, Fatehpur",2024-25,Pre,5.3
+UTTAR PRADESH,Bithoor,2017-18,Post,5.4
+UTTAR PRADESH,Bithoor,2017-18,Pre,5.5
+UTTAR PRADESH,Bithoor,2018-19,Post,4.7
+UTTAR PRADESH,Bithoor,2018-19,Pre,4.9
+UTTAR PRADESH,Bithoor,2019-20,Post,5.3
+UTTAR PRADESH,Bithoor,2019-20,Pre,4.8
+UTTAR PRADESH,Bithoor,2020-21,Post,4.8
+UTTAR PRADESH,Bithoor,2021-22,Post,5.3
+UTTAR PRADESH,Bithoor,2022-23,Post,4.7
+UTTAR PRADESH,Bithoor,2022-23,Pre,4.7
+UTTAR PRADESH,Bithoor,2023-24,Post,4.5
+UTTAR PRADESH,Bithoor,2023-24,Pre,5.3
+UTTAR PRADESH,Bithoor,2024-25,Post,5.0
+UTTAR PRADESH,Bithoor,2024-25,Pre,4.8
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2017-18,Post,4.7
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2017-18,Pre,5.2
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2018-19,Post,4.0
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2018-19,Pre,5.2
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2019-20,Post,5.3
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2020-21,Post,5.4
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2021-22,Post,5.0
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2022-23,Post,5.0
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2022-23,Pre,4.8
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2023-24,Post,5.4
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2023-24,Pre,4.7
+UTTAR PRADESH,"Bridge on GT Road, Prayagraj",2024-25,Pre,5.4
+UTTAR PRADESH,"Deorighat, Kanpur",2017-18,Post,4.7
+UTTAR PRADESH,"Deorighat, Kanpur",2017-18,Pre,4.7
+UTTAR PRADESH,"Deorighat, Kanpur",2018-19,Post,4.6
+UTTAR PRADESH,"Deorighat, Kanpur",2018-19,Pre,4.9
+UTTAR PRADESH,"Deorighat, Kanpur",2019-20,Post,4.8
+UTTAR PRADESH,"Deorighat, Kanpur",2019-20,Pre,4.7
+UTTAR PRADESH,"Deorighat, Kanpur",2020-21,Post,5.2
+UTTAR PRADESH,"Deorighat, Kanpur",2021-22,Post,5.3
+UTTAR PRADESH,"Deorighat, Kanpur",2022-23,Post,4.9
+UTTAR PRADESH,"Deorighat, Kanpur",2022-23,Pre,4.8
+UTTAR PRADESH,"Deorighat, Kanpur",2023-24,Post,4.6
+UTTAR PRADESH,"Deorighat, Kanpur",2023-24,Pre,4.9
+UTTAR PRADESH,"Deorighat, Kanpur",2024-25,Post,5.2
+UTTAR PRADESH,"Deorighat, Kanpur",2024-25,Pre,4.7
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2017-18,Post,4.7
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2017-18,Pre,4.7
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2018-19,Post,5.3
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2018-19,Pre,4.8
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2019-20,Post,5.1
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2019-20,Pre,4.7
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2020-21,Post,5.0
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2021-22,Post,4.8
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2022-23,Post,5.1
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2022-23,Pre,5.1
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2023-24,Post,5.4
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2023-24,Pre,5.3
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2024-25,Post,4.9
+UTTAR PRADESH,Ganga Barrage U/S Kanpur,2024-25,Pre,5.0
+UTTAR PRADESH,"Jajmau, Kanpur",2017-18,Post,4.7
+UTTAR PRADESH,"Jajmau, Kanpur",2018-19,Post,5.6
+UTTAR PRADESH,"Jajmau, Kanpur",2018-19,Pre,5.7
+UTTAR PRADESH,"Jajmau, Kanpur",2019-20,Post,4.9
+UTTAR PRADESH,"Jajmau, Kanpur",2019-20,Pre,5.3
+UTTAR PRADESH,"Jajmau, Kanpur",2020-21,Post,4.7
+UTTAR PRADESH,"Jajmau, Kanpur",2021-22,Post,5.3
+UTTAR PRADESH,"Jajmau, Kanpur",2022-23,Post,4.0
+UTTAR PRADESH,"Jajmau, Kanpur",2022-23,Pre,4.9
+UTTAR PRADESH,"Jajmau, Kanpur",2023-24,Post,4.7
+UTTAR PRADESH,"Jajmau, Kanpur",2023-24,Pre,4.9
+UTTAR PRADESH,"Jajmau, Kanpur",2024-25,Post,4.6
+UTTAR PRADESH,"Jajmau, Kanpur",2024-25,Pre,5.3
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2017-18,Post,4.7
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2017-18,Pre,5.2
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2018-19,Post,5.2
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2018-19,Pre,5.4
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2019-20,Post,0.0
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2019-20,Pre,5.3
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2020-21,Post,4.9
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2021-22,Post,4.9
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2022-23,Post,5.0
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2022-23,Pre,5.4
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2023-24,Post,5.4
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2023-24,Pre,5.4
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2024-25,Post,5.1
+UTTAR PRADESH,"Kacchla Ghat, Badaun",2024-25,Pre,5.0
+UTTAR PRADESH,Kannauj D/S,2017-18,Post,4.6
+UTTAR PRADESH,Kannauj D/S,2017-18,Pre,6.0
+UTTAR PRADESH,Kannauj D/S,2018-19,Post,5.0
+UTTAR PRADESH,Kannauj D/S,2018-19,Pre,5.5
+UTTAR PRADESH,Kannauj D/S,2019-20,Post,5.6
+UTTAR PRADESH,Kannauj D/S,2019-20,Pre,5.5
+UTTAR PRADESH,Kannauj D/S,2020-21,Post,5.3
+UTTAR PRADESH,Kannauj D/S,2021-22,Post,5.0
+UTTAR PRADESH,Kannauj D/S,2022-23,Post,4.8
+UTTAR PRADESH,Kannauj D/S,2022-23,Pre,4.6
+UTTAR PRADESH,Kannauj D/S,2023-24,Post,5.5
+UTTAR PRADESH,Kannauj D/S,2023-24,Pre,4.9
+UTTAR PRADESH,Kannauj D/S,2024-25,Post,5.6
+UTTAR PRADESH,Kannauj D/S,2024-25,Pre,5.1
+UTTAR PRADESH,Madhya Ganga Barrage,2017-18,Post,4.3
+UTTAR PRADESH,Madhya Ganga Barrage,2017-18,Pre,5.4
+UTTAR PRADESH,Madhya Ganga Barrage,2018-19,Post,5.4
+UTTAR PRADESH,Madhya Ganga Barrage,2018-19,Pre,5.4
+UTTAR PRADESH,Madhya Ganga Barrage,2019-20,Post,4.9
+UTTAR PRADESH,Madhya Ganga Barrage,2019-20,Pre,4.8
+UTTAR PRADESH,Madhya Ganga Barrage,2020-21,Post,5.0
+UTTAR PRADESH,Madhya Ganga Barrage,2021-22,Post,4.6
+UTTAR PRADESH,Madhya Ganga Barrage,2022-23,Post,4.6
+UTTAR PRADESH,Madhya Ganga Barrage,2022-23,Pre,4.7
+UTTAR PRADESH,Madhya Ganga Barrage,2023-24,Post,4.8
+UTTAR PRADESH,Madhya Ganga Barrage,2023-24,Pre,5.2
+UTTAR PRADESH,Madhya Ganga Barrage,2024-25,Post,4.8
+UTTAR PRADESH,Madhya Ganga Barrage,2024-25,Pre,4.9
+UTTAR PRADESH,Narora,2017-18,Post,4.3
+UTTAR PRADESH,Narora,2017-18,Pre,5.2
+UTTAR PRADESH,Narora,2018-19,Post,5.4
+UTTAR PRADESH,Narora,2018-19,Pre,5.1
+UTTAR PRADESH,Narora,2019-20,Post,4.4
+UTTAR PRADESH,Narora,2019-20,Pre,5.0
+UTTAR PRADESH,Narora,2020-21,Post,5.0
+UTTAR PRADESH,Narora,2021-22,Post,4.2
+UTTAR PRADESH,Narora,2022-23,Post,4.7
+UTTAR PRADESH,Narora,2022-23,Pre,4.9
+UTTAR PRADESH,Narora,2023-24,Post,5.1
+UTTAR PRADESH,Narora,2023-24,Pre,4.8
+UTTAR PRADESH,Narora,2024-25,Pre,4.6
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2017-18,Post,5.1
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2017-18,Pre,6.1
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2018-19,Post,5.5
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2018-19,Pre,5.5
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2019-20,Post,4.7
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2019-20,Pre,5.1
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2020-21,Post,5.3
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2021-22,Post,6.0
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2022-23,Post,5.3
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2022-23,Pre,5.2
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2023-24,Post,4.6
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2023-24,Pre,4.9
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2024-25,Post,6.0
+UTTAR PRADESH,"Panchal Ghat, Farrukhabad",2024-25,Pre,4.9
+UTTAR PRADESH,Prayagraj D/S,2017-18,Post,5.1
+UTTAR PRADESH,Prayagraj D/S,2017-18,Pre,5.1
+UTTAR PRADESH,Prayagraj D/S,2018-19,Post,6.1
+UTTAR PRADESH,Prayagraj D/S,2018-19,Pre,5.2
+UTTAR PRADESH,Prayagraj D/S,2019-20,Post,5.4
+UTTAR PRADESH,Prayagraj D/S,2019-20,Pre,5.8
+UTTAR PRADESH,Prayagraj D/S,2020-21,Post,5.5
+UTTAR PRADESH,Prayagraj D/S,2021-22,Post,5.6
+UTTAR PRADESH,Prayagraj D/S,2022-23,Post,5.0
+UTTAR PRADESH,Prayagraj D/S,2022-23,Pre,4.8
+UTTAR PRADESH,Prayagraj D/S,2023-24,Post,6.3
+UTTAR PRADESH,Prayagraj D/S,2023-24,Pre,5.1
+UTTAR PRADESH,Prayagraj D/S,2024-25,Post,5.5
+UTTAR PRADESH,Prayagraj D/S,2024-25,Pre,4.9
+UTTAR PRADESH,Rajwari A/C Gomti,2017-18,Post,5.1
+UTTAR PRADESH,Rajwari A/C Gomti,2017-18,Pre,5.4
+UTTAR PRADESH,Rajwari A/C Gomti,2018-19,Post,4.7
+UTTAR PRADESH,Rajwari A/C Gomti,2018-19,Pre,5.1
+UTTAR PRADESH,Rajwari A/C Gomti,2019-20,Post,5.1
+UTTAR PRADESH,Rajwari A/C Gomti,2019-20,Pre,6.0
+UTTAR PRADESH,Rajwari A/C Gomti,2020-21,Post,5.2
+UTTAR PRADESH,Rajwari A/C Gomti,2021-22,Post,5.4
+UTTAR PRADESH,Rajwari A/C Gomti,2022-23,Post,4.9
+UTTAR PRADESH,Rajwari A/C Gomti,2022-23,Pre,4.9
+UTTAR PRADESH,Rajwari A/C Gomti,2023-24,Post,5.1
+UTTAR PRADESH,Rajwari A/C Gomti,2023-24,Pre,5.1
+UTTAR PRADESH,Rajwari A/C Gomti,2024-25,Post,5.1
+UTTAR PRADESH,Rajwari A/C Gomti,2024-25,Pre,5.6
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2017-18,Post,5.1
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2017-18,Pre,5.2
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2018-19,Post,4.0
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2018-19,Pre,4.6
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2019-20,Post,4.5
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2019-20,Pre,4.8
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2020-21,Post,5.0
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2021-22,Post,5.8
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2022-23,Post,4.3
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2022-23,Pre,4.8
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2023-24,Post,4.7
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2023-24,Pre,4.7
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2024-25,Post,5.4
+UTTAR PRADESH,"Shukla Ganj, Kanpur",2024-25,Pre,4.3
+UTTAR PRADESH,"Sirsa, Tamas D/S",2017-18,Post,5.4
+UTTAR PRADESH,"Sirsa, Tamas D/S",2017-18,Pre,5.1
+UTTAR PRADESH,"Sirsa, Tamas D/S",2018-19,Post,5.6
+UTTAR PRADESH,"Sirsa, Tamas D/S",2018-19,Pre,5.4
+UTTAR PRADESH,"Sirsa, Tamas D/S",2019-20,Post,5.6
+UTTAR PRADESH,"Sirsa, Tamas D/S",2019-20,Pre,6.0
+UTTAR PRADESH,"Sirsa, Tamas D/S",2020-21,Post,5.6
+UTTAR PRADESH,"Sirsa, Tamas D/S",2021-22,Post,5.1
+UTTAR PRADESH,"Sirsa, Tamas D/S",2022-23,Post,4.8
+UTTAR PRADESH,"Sirsa, Tamas D/S",2022-23,Pre,5.0
+UTTAR PRADESH,"Sirsa, Tamas D/S",2023-24,Post,5.5
+UTTAR PRADESH,"Sirsa, Tamas D/S",2023-24,Pre,4.8
+UTTAR PRADESH,"Sirsa, Tamas D/S",2024-25,Post,5.2
+UTTAR PRADESH,"Sirsa, Tamas D/S",2024-25,Pre,5.3
+UTTAR PRADESH,Varanasi D/S,2017-18,Post,5.0
+UTTAR PRADESH,Varanasi D/S,2017-18,Pre,4.7
+UTTAR PRADESH,Varanasi D/S,2018-19,Post,6.1
+UTTAR PRADESH,Varanasi D/S,2018-19,Pre,5.2
+UTTAR PRADESH,Varanasi D/S,2019-20,Post,4.9
+UTTAR PRADESH,Varanasi D/S,2019-20,Pre,6.6
+UTTAR PRADESH,Varanasi D/S,2020-21,Post,4.8
+UTTAR PRADESH,Varanasi D/S,2021-22,Post,5.3
+UTTAR PRADESH,Varanasi D/S,2022-23,Post,4.9
+UTTAR PRADESH,Varanasi D/S,2022-23,Pre,5.2
+UTTAR PRADESH,Varanasi D/S,2023-24,Post,5.3
+UTTAR PRADESH,Varanasi D/S,2023-24,Pre,5.4
+UTTAR PRADESH,Varanasi D/S,2024-25,Post,5.8
+UTTAR PRADESH,Varanasi D/S,2024-25,Pre,5.7
+UTTAR PRADESH,Varanasi U/S,2017-18,Post,4.7
+UTTAR PRADESH,Varanasi U/S,2017-18,Pre,4.9
+UTTAR PRADESH,Varanasi U/S,2018-19,Post,5.3
+UTTAR PRADESH,Varanasi U/S,2018-19,Pre,5.6
+UTTAR PRADESH,Varanasi U/S,2019-20,Post,5.3
+UTTAR PRADESH,Varanasi U/S,2019-20,Pre,6.1
+UTTAR PRADESH,Varanasi U/S,2020-21,Post,5.3
+UTTAR PRADESH,Varanasi U/S,2021-22,Post,5.1
+UTTAR PRADESH,Varanasi U/S,2022-23,Post,4.3
+UTTAR PRADESH,Varanasi U/S,2022-23,Pre,4.9
+UTTAR PRADESH,Varanasi U/S,2023-24,Post,5.2
+UTTAR PRADESH,Varanasi U/S,2023-24,Pre,6.1
+UTTAR PRADESH,Varanasi U/S,2024-25,Post,5.0
+UTTAR PRADESH,Varanasi U/S,2024-25,Pre,5.4
+UTTARAKHAND,Gangotri,2022-23,Post,8.5
+UTTARAKHAND,Gangotri,2023-24,Post,6.8
+UTTARAKHAND,Gangotri,2023-24,Pre,7.4
+UTTARAKHAND,Gangotri,2024-25,Post,6.1
+UTTARAKHAND,Gangotri,2024-25,Pre,8.0
+UTTARAKHAND,Haridwar Barrage,2017-18,Post,7.3
+UTTARAKHAND,Haridwar Barrage,2017-18,Pre,7.2
+UTTARAKHAND,Haridwar Barrage,2018-19,Post,5.0
+UTTARAKHAND,Haridwar Barrage,2018-19,Pre,5.1
+UTTARAKHAND,Haridwar Barrage,2019-20,Post,5.8
+UTTARAKHAND,Haridwar Barrage,2019-20,Pre,6.2
+UTTARAKHAND,Haridwar Barrage,2020-21,Post,5.4
+UTTARAKHAND,Haridwar Barrage,2021-22,Post,5.8
+UTTARAKHAND,Haridwar Barrage,2022-23,Post,5.4
+UTTARAKHAND,Haridwar Barrage,2022-23,Pre,5.1
+UTTARAKHAND,Haridwar Barrage,2023-24,Post,6.2
+UTTARAKHAND,Haridwar Barrage,2023-24,Pre,5.0
+UTTARAKHAND,Haridwar Barrage,2024-25,Post,6.2
+UTTARAKHAND,Haridwar Barrage,2024-25,Pre,5.1
+UTTARAKHAND,Harsil,2022-23,Post,8.0
+UTTARAKHAND,Harsil,2023-24,Post,6.3
+UTTARAKHAND,Harsil,2023-24,Pre,6.2
+UTTARAKHAND,Harsil,2024-25,Post,6.5
+UTTARAKHAND,Harsil,2024-25,Pre,6.2
+UTTARAKHAND,Jagjeetpur D/S,2017-18,Post,2.3
+UTTARAKHAND,Jagjeetpur D/S,2017-18,Pre,5.8
+UTTARAKHAND,Jagjeetpur D/S,2018-19,Post,2.6
+UTTARAKHAND,Jagjeetpur D/S,2018-19,Pre,2.3
+UTTARAKHAND,Jagjeetpur D/S,2019-20,Post,3.7
+UTTARAKHAND,Jagjeetpur D/S,2019-20,Pre,3.1
+UTTARAKHAND,Jagjeetpur D/S,2020-21,Post,5.6
+UTTARAKHAND,Jagjeetpur D/S,2021-22,Post,3.5
+UTTARAKHAND,Jagjeetpur D/S,2022-23,Post,3.8
+UTTARAKHAND,Jagjeetpur D/S,2022-23,Pre,3.8
+UTTARAKHAND,Jagjeetpur D/S,2023-24,Post,4.5
+UTTARAKHAND,Jagjeetpur D/S,2023-24,Pre,4.1
+UTTARAKHAND,Jagjeetpur D/S,2024-25,Post,4.2
+UTTARAKHAND,Jagjeetpur D/S,2024-25,Pre,4.8
+UTTARAKHAND,Jagjeetpur U/S,2017-18,Post,5.9
+UTTARAKHAND,Jagjeetpur U/S,2017-18,Pre,6.2
+UTTARAKHAND,Jagjeetpur U/S,2018-19,Post,4.8
+UTTARAKHAND,Jagjeetpur U/S,2018-19,Pre,4.8
+UTTARAKHAND,Jagjeetpur U/S,2019-20,Post,5.6
+UTTARAKHAND,Jagjeetpur U/S,2019-20,Pre,5.5
+UTTARAKHAND,Jagjeetpur U/S,2020-21,Post,6.2
+UTTARAKHAND,Jagjeetpur U/S,2021-22,Post,6.0
+UTTARAKHAND,Jagjeetpur U/S,2022-23,Post,4.9
+UTTARAKHAND,Jagjeetpur U/S,2022-23,Pre,5.8
+UTTARAKHAND,Jagjeetpur U/S,2023-24,Post,5.5
+UTTARAKHAND,Jagjeetpur U/S,2023-24,Pre,4.9
+UTTARAKHAND,Jagjeetpur U/S,2024-25,Post,3.0
+UTTARAKHAND,Uttarkashi D/S,2023-24,Post,6.3
+UTTARAKHAND,Uttarkashi D/S,2023-24,Pre,4.5
+UTTARAKHAND,Uttarkashi D/S,2024-25,Post,7.2
+UTTARAKHAND,Uttarkashi D/S,2024-25,Pre,6.1
+UTTARAKHAND,Uttarkashi U/S,2023-24,Post,7.1
+UTTARAKHAND,Uttarkashi U/S,2024-25,Post,7.0
+UTTARAKHAND,Uttarkashi U/S,2024-25,Pre,7.1
+WEST BENGAL,Ballykhal,2017-18,Post,4.9
+WEST BENGAL,Ballykhal,2017-18,Pre,5.2
+WEST BENGAL,Ballykhal,2018-19,Pre,5.5
+WEST BENGAL,Ballykhal,2019-20,Post,6.0
+WEST BENGAL,Ballykhal,2019-20,Pre,5.2
+WEST BENGAL,Ballykhal,2020-21,Post,5.3
+WEST BENGAL,Ballykhal,2021-22,Post,4.8
+WEST BENGAL,Ballykhal,2022-23,Post,5.3
+WEST BENGAL,Ballykhal,2022-23,Pre,4.8
+WEST BENGAL,Ballykhal,2023-24,Post,5.1
+WEST BENGAL,Ballykhal,2023-24,Pre,5.7
+WEST BENGAL,Ballykhal,2024-25,Post,4.3
+WEST BENGAL,Ballykhal,2024-25,Pre,4.9
+WEST BENGAL,Beharampore U/S,2017-18,Post,4.2
+WEST BENGAL,Beharampore U/S,2017-18,Pre,5.6
+WEST BENGAL,Beharampore U/S,2018-19,Pre,5.2
+WEST BENGAL,Beharampore U/S,2019-20,Post,5.0
+WEST BENGAL,Beharampore U/S,2019-20,Pre,5.9
+WEST BENGAL,Beharampore U/S,2020-21,Post,4.5
+WEST BENGAL,Beharampore U/S,2021-22,Post,4.8
+WEST BENGAL,Beharampore U/S,2022-23,Post,4.9
+WEST BENGAL,Beharampore U/S,2022-23,Pre,5.9
+WEST BENGAL,Beharampore U/S,2023-24,Post,5.2
+WEST BENGAL,Beharampore U/S,2023-24,Pre,6.0
+WEST BENGAL,Beharampore U/S,2024-25,Post,4.7
+WEST BENGAL,Beharampore U/S,2024-25,Pre,5.3
+WEST BENGAL,Behrampore D/S,2017-18,Post,5.6
+WEST BENGAL,Behrampore D/S,2017-18,Pre,5.7
+WEST BENGAL,Behrampore D/S,2018-19,Pre,5.0
+WEST BENGAL,Behrampore D/S,2019-20,Post,5.3
+WEST BENGAL,Behrampore D/S,2019-20,Pre,5.5
+WEST BENGAL,Behrampore D/S,2020-21,Post,4.8
+WEST BENGAL,Behrampore D/S,2021-22,Post,5.0
+WEST BENGAL,Behrampore D/S,2022-23,Post,4.6
+WEST BENGAL,Behrampore D/S,2022-23,Pre,5.5
+WEST BENGAL,Behrampore D/S,2023-24,Post,5.1
+WEST BENGAL,Behrampore D/S,2023-24,Pre,5.1
+WEST BENGAL,Behrampore D/S,2024-25,Post,5.0
+WEST BENGAL,Behrampore D/S,2024-25,Pre,6.1
+WEST BENGAL,Belgharia,2017-18,Post,4.9
+WEST BENGAL,Belgharia,2017-18,Pre,5.4
+WEST BENGAL,Belgharia,2018-19,Pre,5.5
+WEST BENGAL,Belgharia,2019-20,Post,4.6
+WEST BENGAL,Belgharia,2019-20,Pre,4.9
+WEST BENGAL,Belgharia,2020-21,Post,4.2
+WEST BENGAL,Belgharia,2021-22,Post,4.6
+WEST BENGAL,Belgharia,2022-23,Post,5.3
+WEST BENGAL,Belgharia,2022-23,Pre,4.9
+WEST BENGAL,Belgharia,2023-24,Post,5.1
+WEST BENGAL,Belgharia,2023-24,Pre,5.5
+WEST BENGAL,Belgharia,2024-25,Post,4.2
+WEST BENGAL,Belgharia,2024-25,Pre,4.8
+WEST BENGAL,Garden Reach,2017-18,Post,5.2
+WEST BENGAL,Garden Reach,2017-18,Pre,6.0
+WEST BENGAL,Garden Reach,2018-19,Pre,5.3
+WEST BENGAL,Garden Reach,2019-20,Post,4.9
+WEST BENGAL,Garden Reach,2020-21,Post,5.2
+WEST BENGAL,Garden Reach,2021-22,Post,4.6
+WEST BENGAL,Garden Reach,2022-23,Post,5.3
+WEST BENGAL,Garden Reach,2022-23,Pre,5.6
+WEST BENGAL,Garden Reach,2023-24,Post,4.2
+WEST BENGAL,Garden Reach,2023-24,Pre,5.3
+WEST BENGAL,Garden Reach,2024-25,Post,5.3
+WEST BENGAL,Garden Reach,2024-25,Pre,4.7
+WEST BENGAL,Howrah Bridge,2017-18,Post,5.6
+WEST BENGAL,Howrah Bridge,2017-18,Pre,6.0
+WEST BENGAL,Howrah Bridge,2018-19,Pre,6.0
+WEST BENGAL,Howrah Bridge,2019-20,Post,4.8
+WEST BENGAL,Howrah Bridge,2019-20,Pre,6.0
+WEST BENGAL,Howrah Bridge,2020-21,Post,4.4
+WEST BENGAL,Howrah Bridge,2021-22,Post,4.9
+WEST BENGAL,Howrah Bridge,2022-23,Post,5.0
+WEST BENGAL,Howrah Bridge,2023-24,Post,5.2
+WEST BENGAL,Howrah Bridge,2023-24,Pre,4.7
+WEST BENGAL,Howrah Bridge,2024-25,Post,4.8
+WEST BENGAL,Howrah Bridge,2024-25,Pre,5.2
+WEST BENGAL,Kharda Khal D/S,2017-18,Post,5.1
+WEST BENGAL,Kharda Khal D/S,2017-18,Pre,6.3
+WEST BENGAL,Kharda Khal D/S,2018-19,Pre,5.4
+WEST BENGAL,Kharda Khal D/S,2019-20,Post,5.0
+WEST BENGAL,Kharda Khal D/S,2019-20,Pre,4.4
+WEST BENGAL,Kharda Khal D/S,2020-21,Post,5.4
+WEST BENGAL,Kharda Khal D/S,2021-22,Post,4.6
+WEST BENGAL,Kharda Khal D/S,2022-23,Post,4.9
+WEST BENGAL,Kharda Khal D/S,2022-23,Pre,5.0
+WEST BENGAL,Kharda Khal D/S,2023-24,Post,4.8
+WEST BENGAL,Kharda Khal D/S,2023-24,Pre,5.3
+WEST BENGAL,Kharda Khal D/S,2024-25,Post,4.2
+WEST BENGAL,Kharda Khal D/S,2024-25,Pre,5.9
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2017-18,Post,4.8
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2017-18,Pre,5.4
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2018-19,Pre,5.3
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2019-20,Post,5.4
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2019-20,Pre,5.2
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2020-21,Post,5.2
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2021-22,Post,5.0
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2022-23,Post,5.0
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2022-23,Pre,5.1
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2023-24,Post,5.2
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2023-24,Pre,4.9
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2024-25,Post,5.2
+WEST BENGAL,Khiddirpur Bridge Murshidabad,2024-25,Pre,4.6
+WEST BENGAL,Srerampore,2022-23,Post,4.7
+WEST BENGAL,Srerampore,2023-24,Post,4.4
+WEST BENGAL,Srerampore,2023-24,Pre,4.7
+WEST BENGAL,Srerampore,2024-25,Post,4.8
+WEST BENGAL,Srerampore,2024-25,Pre,4.5

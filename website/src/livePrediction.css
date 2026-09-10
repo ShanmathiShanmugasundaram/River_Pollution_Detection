@@ -1,0 +1,36 @@
+.live-forecast-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #0284c7;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.previous-item {
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.previous-item:hover {
+  background: rgba(14, 165, 233, 0.05);
+}
+
+.previous-item.active {
+  border-color: #0284c7;
+  background: rgba(14, 165, 233, 0.08);
+}
+
+@media (max-width: 760px) {
+  .live-upload-grid { display: flex; flex-direction: column; }
+  .live-result-header, .live-toolbar { display: block; }
+  .result-actions { margin-top: 14px; }
+  .live-filters { justify-content: flex-start; margin-top: 14px; }
+  .live-filters select, .live-filters .search-box { flex: 1; min-width: 120px; }
+  .notification-dropdown { right: -65px; width: 290px; }
+  .previous-list > div { grid-template-columns: 1fr 1fr; }
+  .previous-list > div > div:last-child { grid-column: 1 / -1; margin-top: 4px; }
+}
