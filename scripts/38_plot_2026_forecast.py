@@ -40,7 +40,7 @@ monthly = (
             "Pred_DO": "mean",
             "Pred_pH": "mean",
             "Pred_BOD": "mean",
-            "Predicted_WQI": "mean",
+            "Pred_WQI": "mean",
         }
     )
     .reset_index()
@@ -147,7 +147,7 @@ plt.figure(figsize=(10,5))
 
 plt.plot(
     months,
-    monthly["Predicted_WQI"],
+    monthly["Pred_WQI"],
     marker="o",
     linewidth=3
 )

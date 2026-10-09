@@ -58,7 +58,7 @@ comparison = pd.DataFrame({
         forecast_2026["Pred_DO"].mean(),
         forecast_2026["Pred_pH"].mean(),
         forecast_2026["Pred_BOD"].mean(),
-        forecast_2026["Predicted_WQI"].mean()
+        forecast_2026["Pred_WQI"].mean()
 
     ]
 
@@ -122,7 +122,7 @@ for parameter in comparison["Parameter"]:
 
 
 # ============================================
-# WQI Category Comparison
+# WQI Predicted_Class Comparison
 # ============================================
 
 actual_category = (
@@ -131,7 +131,7 @@ actual_category = (
 )
 
 forecast_category = (
-    forecast_2026["Category"]
+    forecast_2026["Predicted_Class"]
     .value_counts()
 )
 
@@ -154,14 +154,14 @@ category_df.plot(
 
 plt.ylabel("Samples")
 
-plt.title("Water Quality Category Comparison")
+plt.title("Water Quality Predicted_Class Comparison")
 
 plt.tight_layout()
 
 plt.savefig(
 
     OUTPUT_FOLDER /
-    "Category_Comparison.png"
+    "Predicted_Class_Comparison.png"
 
 )
 

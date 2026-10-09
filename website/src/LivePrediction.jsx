@@ -30,11 +30,7 @@ export function LivePrediction() {
   const [stage, setStage] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [result, setResult] = useState(null);
-  const [history, setHistory] = useState([]);
   const [filters, setFilters] = useState({ search: '', state: '', wqi: '', hotspot: '', cpcb: '', sort: 'wqi' });
-
-  const loadHistory = () => request('/live-predictions').then(setHistory).catch(() => setHistory([]));
-  useEffect(() => { loadHistory(); }, []);
 
   const chooseFile = (candidate) => {
     setError('');
@@ -70,36 +66,12 @@ export function LivePrediction() {
       setResult(body);
       setStage(stages.length - 1);
       setFile(null);
-      await loadHistory();
       window.dispatchEvent(new Event('notifications-updated'));
     } catch (requestError) {
       setError(requestError.message);
     } finally {
       window.clearInterval(interval);
       setProcessing(false);
-    }
-  };
-
-  const loadUpload = async (uploadId) => {
-    try {
-      const data = await request(`/live-predictions/${uploadId}`);
-      if (data && (data.predictions || Array.isArray(data))) {
-        const payload = data.predictions ? data : {
-          upload_id: uploadId,
-          input_month: data[0]?.input_month || 'Upload',
-          input_year: data[0]?.input_year || '',
-          forecast_month: data[0]?.Forecast_Month || '',
-          forecast_year: data[0]?.Forecast_Year || '',
-          stations_processed: new Set(data.map(d => d['Station Code'])).size,
-          predictions: data,
-          high_hotspots: data.filter(d => d.Severity === 'High Risk' || d.Hotspot_Level === 'High Hotspot').length,
-          warnings: data.filter(d => d.Severity === 'Warning').length,
-        };
-        setResult(payload);
-        window.scrollTo({ top: 350, behavior: 'smooth' });
-      }
-    } catch (err) {
-      console.error('Failed to load live prediction:', err);
     }
   };
 
@@ -131,7 +103,7 @@ export function LivePrediction() {
   return <>
     <div className="page-heading">
       <div>
-        <div className="eyebrow">Live model inference / 11</div>
+        <div className="eyebrow">Live model inference</div>
         <h1>Live Water Quality Prediction</h1>
         <p>Upload a monthly reading CSV to predict the next month's water quality across stations.</p>
       </div>
@@ -201,7 +173,6 @@ export function LivePrediction() {
       </div>
     )}
     {result && <LiveResults result={result} filtered={filtered} states={states} filters={filters} setFilters={setFilters} download={download} />}
-    <PreviousPredictions history={history} onSelectUpload={loadUpload} selectedId={result?.upload_id} />
   </>;
 }
 
@@ -342,47 +313,5 @@ function LiveResults({ result, filtered, states, filters, setFilters, download }
   );
 }
 
-function PreviousPredictions({ history, onSelectUpload, selectedId }) {
-  return (
-    <section className="panel previous-live">
-      <div className="section-header">
-        <div>
-          <div className="eyebrow">Database prediction history</div>
-          <h2>Previous live predictions</h2>
-        </div>
-        <span className="muted">{history.length} uploads</span>
-      </div>
-      {history.length ? (
-        <div className="previous-list">
-          {history.map((item) => (
-            <div
-              key={item.upload_id}
-              className={`previous-item ${selectedId === item.upload_id ? 'active' : ''}`}
-              onClick={() => onSelectUpload && onSelectUpload(item.upload_id)}
-              style={{ cursor: 'pointer' }}
-              title="Click to view full forecast results"
-            >
-              <div>
-                <strong>{item.input_month} {item.input_year} → {item.forecast_month} {item.forecast_year}</strong>
-                <span>{new Date(item.created_at).toLocaleString()} · {item.stations_processed} stations · <span style={{ textDecoration: 'underline', color: 'var(--color-primary, #0ea5e9)' }}>View Details →</span></span>
-              </div>
-              <div>
-                <strong>{number(item.average_wqi)}</strong>
-                <span>avg predicted WQI</span>
-              </div>
-              <div>
-                <StatusBadge kind={item.high_hotspots > 0 ? "high-hotspot" : "compliant"}>
-                  {item.high_hotspots > 0 ? `${item.high_hotspots} alerts` : 'Normal / Compliant'}
-                </StatusBadge>
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <p className="empty-state">No live predictions have been saved yet. Results will appear here after a successful upload.</p>
-      )}
-    </section>
-  );
-}
 
 export function NotificationsPage() { const navigate = useNavigate(); const [notifications, setNotifications] = useState([]); const [filter, setFilter] = useState('all'); const load = () => request('/notifications').then(setNotifications).catch(() => setNotifications([])); useEffect(() => { load(); }, []); const filtered = notifications.filter((item) => filter === 'all' || filter === 'unread' && !item.is_read || filter === 'high' && item.severity === 'High Risk' || filter === 'read' && item.is_read); const markRead = async (item) => { await request(`/notifications/${item.notification_id}/read`, { method: 'PUT' }); window.dispatchEvent(new Event('notifications-updated')); navigate(`/stations/${item.station_code}`); }; return <><div className="page-heading"><div><div className="eyebrow">Single-source alerts / 12</div><h1>Messages & Notifications</h1><p>MySQL-backed forecast alerts generated by the live prediction workflow.</p></div><button className="button ghost" onClick={() => request('/notifications/read-all', { method: 'PUT' }).then(load)}><CheckCircle2 size={15} /> Mark all read</button></div><div className="filter-tabs notification-tabs">{[['all', 'All'], ['unread', 'Unread'], ['high', 'High Risk'], ['read', 'Read']].map(([key, label]) => <button key={key} className={filter === key ? 'selected' : ''} onClick={() => setFilter(key)}>{label}</button>)}</div><section className="panel notification-list">{filtered.length ? filtered.map((item) => <button className={item.is_read ? 'notification-item read' : 'notification-item'} key={item.notification_id} onClick={() => markRead(item)}><span className="notification-icon"><AlertTriangle size={17} /></span><span><strong>{item.station_name} · {item.forecast_month}</strong><small>{item.severity} · Station {item.station_code}, {item.state}</small><em>{item.message}</em></span><span className="notification-wqi">WQI {number(item.predicted_wqi)}</span></button>) : <p className="empty-state">No notifications in this filter.</p>}</section></>; }

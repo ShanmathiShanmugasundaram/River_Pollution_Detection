@@ -250,45 +250,54 @@ def station(station_code):
 MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 
-def calculate_continuous_wqi(do, ph, bod):
+def score_do(value):
+    if value >= 8:
+        return 100.0
+    elif value >= 6:
+        return 80.0
+    elif value >= 4:
+        return 60.0
+    elif value >= 2:
+        return 40.0
+    else:
+        return 20.0
+
+
+def score_ph(value):
+    if 6.5 <= value <= 8.5:
+        return 100.0
+    elif (6.0 <= value < 6.5) or (8.5 < value <= 9.0):
+        return 80.0
+    elif (5.5 <= value < 6.0) or (9.0 < value <= 9.5):
+        return 60.0
+    else:
+        return 40.0
+
+
+def score_bod(value):
+    if value <= 2:
+        return 100.0
+    elif value <= 3:
+        return 80.0
+    elif value <= 5:
+        return 60.0
+    elif value <= 8:
+        return 40.0
+    else:
+        return 20.0
+
+
+def calculate_wqi(do, ph, bod):
     if pd.isna(do) or pd.isna(ph) or pd.isna(bod):
         return 85.0
     try:
         do, ph, bod = float(do), float(ph), float(bod)
     except (ValueError, TypeError):
         return 85.0
+    return round(0.40 * score_do(do) + 0.30 * score_ph(ph) + 0.30 * score_bod(bod), 2)
 
-    # DO score (40% weight) - Higher DO is better
-    if do >= 8.5:
-        q_do = 100.0
-    elif do >= 6.0:
-        q_do = 75.0 + (do - 6.0) / 2.5 * 25.0
-    elif do >= 4.0:
-        q_do = 50.0 + (do - 4.0) / 2.0 * 25.0
-    else:
-        q_do = max(0.0, (do / 4.0) * 50.0)
 
-    # pH score (30% weight) - Ideal 7.0 - 8.0
-    if 7.0 <= ph <= 8.0:
-        q_ph = 100.0
-    elif 6.5 <= ph < 7.0:
-        q_ph = 90.0 + (ph - 6.5) / 0.5 * 10.0
-    elif 8.0 < ph <= 8.5:
-        q_ph = 100.0 - (ph - 8.0) / 0.5 * 15.0
-    else:
-        q_ph = max(0.0, 85.0 - abs(ph - 7.5) * 20.0)
-
-    # BOD score (30% weight) - Lower BOD is better (CPCB Class B limit is 3 mg/L)
-    if bod <= 1.5:
-        q_bod = 100.0
-    elif bod <= 3.0:
-        q_bod = 100.0 - (bod - 1.5) / 1.5 * 25.0
-    elif bod <= 5.0:
-        q_bod = 75.0 - (bod - 3.0) / 2.0 * 25.0
-    else:
-        q_bod = max(0.0, 50.0 - (bod - 5.0) * 10.0)
-
-    return round(0.40 * q_do + 0.30 * q_ph + 0.30 * q_bod, 2)
+calculate_continuous_wqi = calculate_wqi
 
 
 def _fetch_monthly_raw(station_code, year_int):
@@ -307,9 +316,8 @@ def _fetch_monthly_raw(station_code, year_int):
             grp["DO"] = grp["Pred_DO"]
             grp["pH"] = grp["Pred_pH"]
             grp["BOD"] = grp["Pred_BOD"]
-            grp["WQI"] = grp.apply(lambda r: calculate_continuous_wqi(r["DO"], r["pH"], r["BOD"]), axis=1)
-            grp["Pred_WQI"] = grp["WQI"]
-            return grp
+            grp["WQI"] = grp["Pred_WQI"]
+            return grp.reset_index(drop=True)
         return None
 
     if year_int == 2025:
@@ -469,41 +477,52 @@ def station_forecast(station_code=None):
 def get_basin_monthly_wqi(year_int):
     if year_int == 2026:
         d26 = load_csv("Forecast_2026_WQI.csv").copy()
-        for col in ["Pred_DO", "Pred_pH", "Pred_BOD"]:
+        for col in ["Pred_DO", "Pred_pH", "Pred_BOD", "Pred_WQI"]:
             d26[col] = pd.to_numeric(d26[col], errors="coerce")
         grp = d26.groupby("Forecast_Month_No", as_index=False).agg({
-            "Pred_DO": "mean", "Pred_pH": "mean", "Pred_BOD": "mean", "Forecast_Month": "first"
+            "Pred_DO": "mean",
+            "Pred_pH": "mean",
+            "Pred_BOD": "mean",
+            "Pred_WQI": "mean",
+            "Forecast_Month": "first"
         }).sort_values("Forecast_Month_No")
         grp["Month_No"] = grp["Forecast_Month_No"]
         grp["Month"] = grp["Forecast_Month"]
-        grp["DO"] = grp["Pred_DO"].round(2)
-        grp["pH"] = grp["Pred_pH"].round(2)
-        grp["BOD"] = grp["Pred_BOD"].round(2)
+        grp["DO"] = grp["Pred_DO"]
+        grp["pH"] = grp["Pred_pH"]
+        grp["BOD"] = grp["Pred_BOD"]
+        grp["WQI"] = grp["Pred_WQI"]
+        grp["Year"] = 2026
+        return grp.reset_index(drop=True)
     elif year_int == 2025:
         d25 = load_csv("Test_2025_Dataset.csv").copy()
         for col in ["DO", "pH", "BOD"]:
             d25[col] = pd.to_numeric(d25[col], errors="coerce")
-        d25 = d25.dropna(subset=["DO", "pH", "BOD"])
+        d25 = d25.dropna(subset=["DO", "pH", "BOD"]).copy()
+        d25["WQI"] = d25.apply(lambda r: calculate_wqi(r["DO"], r["pH"], r["BOD"]), axis=1)
         grp = d25.groupby("Month_No", as_index=False).agg({
-            "DO": "mean", "pH": "mean", "BOD": "mean", "Month": "first"
+            "DO": "mean", "pH": "mean", "BOD": "mean", "WQI": "mean", "Month": "first"
         }).sort_values("Month_No")
         grp["DO"] = grp["DO"].round(2)
         grp["pH"] = grp["pH"].round(2)
         grp["BOD"] = grp["BOD"].round(2)
+        grp["WQI"] = grp["WQI"].round(2)
     else:
         dh = load_csv("Final_Water_Quality_Dataset.csv").copy()
         for col in ["DO", "pH", "BOD"]:
             dh[col] = pd.to_numeric(dh[col], errors="coerce")
-        sub = dh[dh["Year"] == year_int].dropna(subset=["DO", "pH", "BOD"])
+        sub = dh[dh["Year"] == year_int].dropna(subset=["DO", "pH", "BOD"]).copy()
         if sub.empty:
-            sub = dh.dropna(subset=["DO", "pH", "BOD"])
+            sub = dh.dropna(subset=["DO", "pH", "BOD"]).copy()
+        sub["WQI"] = sub.apply(lambda r: calculate_wqi(r["DO"], r["pH"], r["BOD"]), axis=1)
         grp = sub.groupby("Month_No", as_index=False).agg({
-            "DO": "mean", "pH": "mean", "BOD": "mean"
+            "DO": "mean", "pH": "mean", "BOD": "mean", "WQI": "mean"
         }).sort_values("Month_No")
         grp["Month"] = grp["Month_No"].apply(lambda m: MONTH_NAMES[int(m)-1] if 1 <= int(m) <= 12 else f"Month {m}")
         grp["DO"] = grp["DO"].round(2)
         grp["pH"] = grp["pH"].round(2)
         grp["BOD"] = grp["BOD"].round(2)
+        grp["WQI"] = grp["WQI"].round(2)
 
     months_df = pd.DataFrame({
         "Month_No": list(range(1, 13)),
@@ -512,12 +531,15 @@ def get_basin_monthly_wqi(year_int):
     merged = pd.merge(months_df, grp, on="Month_No", how="left", suffixes=("", "_old"))
     if "Month_old" in merged:
         merged = merged.drop(columns=["Month_old"])
-    for col in ["DO", "pH", "BOD"]:
+    for col in ["DO", "pH", "BOD", "WQI"]:
         merged[col] = merged[col].interpolate().bfill().ffill().round(2)
 
-    merged["WQI"] = merged.apply(lambda r: calculate_continuous_wqi(r["DO"], r["pH"], r["BOD"]), axis=1)
+    merged["Pred_DO"] = merged["DO"]
+    merged["Pred_pH"] = merged["pH"]
+    merged["Pred_BOD"] = merged["BOD"]
+    merged["Pred_WQI"] = merged["WQI"]
     merged["Year"] = year_int
-    return merged
+    return merged.reset_index(drop=True)
 
 
 @lru_cache(maxsize=1)
@@ -559,6 +581,7 @@ def wqi_monthly_trend():
     else:
         df = get_basin_monthly_wqi(year_int)
 
+    df = df.reset_index(drop=True)
     monthly_records = []
     for _, r in df.iterrows():
         monthly_records.append({
@@ -567,13 +590,15 @@ def wqi_monthly_trend():
             "WQI": round(float(r["WQI"]), 2),
             "DO": round(float(r["DO"]), 2),
             "pH": round(float(r["pH"]), 2),
-            "BOD": round(float(r["BOD"]), 2)
+            "BOD": round(float(r["BOD"]), 2),
+            "Pred_WQI": float(r["WQI"]),
+            "Pred_DO": float(r["DO"]),
+            "Pred_pH": float(r["pH"]),
+            "Pred_BOD": float(r["BOD"])
         })
 
-    best_idx = int(df["WQI"].idxmax())
-    lowest_idx = int(df["WQI"].idxmin())
-    best_row = df.loc[best_idx]
-    lowest_row = df.loc[lowest_idx]
+    best_row = df.loc[df["WQI"].idxmax()]
+    lowest_row = df.loc[df["WQI"].idxmin()]
 
     return jsonify({
         "year": year_int,
@@ -720,6 +745,20 @@ def mysql_connection():
         raise LivePredictionError("The live prediction database is unavailable.", "mysql_unavailable")
 
 
+from functools import wraps
+
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        user = session.get("user")
+        if not user:
+            return jsonify({"error": "Authentication required."}), 401
+        if user.get("role") != "admin":
+            return jsonify({"error": "Forbidden: Admin access required."}), 403
+        return f(*args, **kwargs)
+    return decorated_function
+
+
 @app.get("/api/auth/me")
 def auth_me():
     user = session.get("user")
@@ -727,7 +766,14 @@ def auth_me():
 
 
 def user_payload(row):
-    return {"user_id": row["user_id"], "full_name": row["full_name"], "email": row["email"], "mobile": row.get("mobile")}
+    return {
+        "user_id": row["user_id"],
+        "full_name": row["full_name"],
+        "email": row["email"],
+        "mobile": row.get("mobile"),
+        "role": row.get("role", "user") or "user",
+        "status": row.get("status", "active") or "active",
+    }
 
 
 @app.post("/api/auth/signup")
@@ -749,10 +795,20 @@ def auth_signup():
             cursor.execute("SELECT user_id FROM users WHERE email=%s", (email,))
             if cursor.fetchone():
                 return jsonify({"error": "An account with this email already exists."}), 409
-            cursor.execute("INSERT INTO users (full_name, email, mobile, password_hash) VALUES (%s,%s,%s,%s)", (full_name, email, mobile, generate_password_hash(password)))
+            cursor.execute(
+                "INSERT INTO users (full_name, email, mobile, password_hash, role, status) VALUES (%s,%s,%s,%s,%s,%s)",
+                (full_name, email, mobile, generate_password_hash(password), "user", "active"),
+            )
             user_id = cursor.lastrowid
         connection.commit()
-        session["user"] = {"user_id": user_id, "full_name": full_name, "email": email, "mobile": mobile}
+        session["user"] = {
+            "user_id": user_id,
+            "full_name": full_name,
+            "email": email,
+            "mobile": mobile,
+            "role": "user",
+            "status": "active",
+        }
         return jsonify({"authenticated": True, "user": session["user"]}), 201
     finally:
         connection.close()
@@ -766,10 +822,15 @@ def auth_login():
     connection = mysql_connection()
     try:
         with connection.cursor() as cursor:
-            cursor.execute("SELECT user_id, full_name, email, mobile, password_hash FROM users WHERE email=%s", (email,))
+            cursor.execute(
+                "SELECT user_id, full_name, email, mobile, password_hash, role, status FROM users WHERE email=%s",
+                (email,),
+            )
             user = cursor.fetchone()
         if not user or not check_password_hash(user["password_hash"], password):
             return jsonify({"error": "Email or password is incorrect."}), 401
+        if user.get("status") in ["inactive", "deactivated"]:
+            return jsonify({"error": "Your account has been deactivated. Please contact an administrator."}), 403
         session["user"] = user_payload(user)
         return jsonify({"authenticated": True, "user": session["user"]})
     finally:
@@ -878,9 +939,17 @@ def _save_to_json_store(upload_info, frame, predictions, notifications_list):
 
 def save_live_result(connection, frame, result, filename):
     average_wqi = sum(item["Predicted_WQI"] for item in result.predictions) / len(result.predictions)
+    current_user = session.get("user")
+    uploader_name = current_user.get("full_name") if current_user else "User"
+    uploader_id = current_user.get("user_id") if current_user else None
+    record_count = len(frame)
+
     upload_summary = {
         "upload_id": result.upload_id,
         "filename": filename,
+        "uploaded_by": uploader_name,
+        "record_count": record_count,
+        "status": "Completed",
         "input_year": result.input_year,
         "input_month_no": result.input_month_no,
         "input_month": result.input_month,
@@ -896,13 +965,13 @@ def save_live_result(connection, frame, result, filename):
 
     notifications_to_save = []
     for item in result.predictions:
-        if item.get("Is_Alert", False) or item.get("Severity") in ["High Risk", "Warning"] or item.get("Hotspot_Level") != "Low / No Hotspot":
-            sev = item.get("Severity", "Warning")
+        # Strictly high-risk forecast alerts (no moderate warning alerts)
+        if item.get("Severity") == "High Risk" or item.get("Hotspot_Level") == "High Hotspot":
+            sev = "High Risk"
             f_label = f"{item['Forecast_Month']} {item['Forecast_Year']}"
-            if sev == "High Risk":
-                msg = f"Critical Alert: {item['Station Name']} ({item['Station Code']}) predicted for {f_label} under High Hotspot conditions (WQI: {item['Predicted_WQI']:.1f}, BOD: {item['Predicted_BOD']:.2f} mg/L, DO: {item['Predicted_DO']:.2f} mg/L). Model indicates critical water quality degradation."
-            else:
-                msg = f"Warning Alert: {item['Station Name']} ({item['Station Code']}) predicted for {f_label} exceeds CPCB reference criteria (WQI: {item['Predicted_WQI']:.1f}, BOD: {item['Predicted_BOD']:.2f} mg/L, DO: {item['Predicted_DO']:.2f} mg/L). Monitoring recommended."
+            msg = f"A high-risk water quality condition is predicted for {item['Station Name']} ({item['Station Code']}) for the forecast period ({f_label}). (Predicted WQI: {item['Predicted_WQI']:.1f}, BOD: {item['Predicted_BOD']:.2f} mg/L, DO: {item['Predicted_DO']:.2f} mg/L)."
+            title = "High-Risk Water Quality Prediction"
+            n_type = "HIGH_RISK_WARNING"
             notifications_to_save.append({
                 "upload_id": result.upload_id,
                 "station_code": str(item["Station Code"]),
@@ -916,6 +985,8 @@ def save_live_result(connection, frame, result, filename):
                 "predicted_ph": float(item["Predicted_pH"]),
                 "predicted_bod": float(item["Predicted_BOD"]),
                 "hotspot_level": str(item["Hotspot_Level"]),
+                "title": title,
+                "notification_type": n_type,
                 "message": msg,
                 "is_read": False,
                 "created_at": datetime.now(timezone.utc).isoformat(),
@@ -926,10 +997,18 @@ def save_live_result(connection, frame, result, filename):
 
     if connection:
         with connection.cursor() as cursor:
+            # Retrieve all admin user IDs
+            cursor.execute("SELECT user_id FROM users WHERE role='admin'")
+            admin_rows = cursor.fetchall()
+            admin_ids = [r["user_id"] for r in admin_rows] if admin_rows else []
+
             cursor.execute("DELETE FROM live_uploads WHERE upload_id=%s", (result.upload_id,))
             cursor.execute(
-                "INSERT INTO live_uploads (upload_id, filename, input_year, input_month_no, input_month, forecast_year, forecast_month_no, forecast_month, stations_processed, average_wqi, warnings, high_hotspots) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-                (result.upload_id, filename, result.input_year, result.input_month_no, result.input_month, result.forecast_year, result.forecast_month_no, result.forecast_month, len(frame["Station Code"].unique()), average_wqi, result.warnings, result.high_hotspots),
+                """INSERT INTO live_uploads 
+                   (upload_id, filename, uploaded_by, record_count, status, input_year, input_month_no, input_month, 
+                    forecast_year, forecast_month_no, forecast_month, stations_processed, average_wqi, warnings, high_hotspots) 
+                   VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
+                (result.upload_id, filename, uploader_name, record_count, "Completed", result.input_year, result.input_month_no, result.input_month, result.forecast_year, result.forecast_month_no, result.forecast_month, len(frame["Station Code"].unique()), average_wqi, result.warnings, result.high_hotspots),
             )
             for _, row in frame.iterrows():
                 cursor.execute(
@@ -949,17 +1028,27 @@ def save_live_result(connection, frame, result, filename):
                         wqi_class=VALUES(wqi_class), hotspot_level=VALUES(hotspot_level)""",
                     (result.upload_id, str(item["Station Code"]), item["Station Name"], item["State"], int(item["Forecast_Year"]), int(item["Forecast_Month_No"]), float(item["Predicted_DO"]), float(item["Predicted_pH"]), float(item["Predicted_BOD"]), float(item["Predicted_WQI"]), item["WQI_Class"], item["Hotspot_Level"], item["CPCB_DO_Status"], item["CPCB_pH_Status"], item["CPCB_BOD_Status"], float(item["CPCB_Violation_Percent"])),
                 )
+
+            # Insert HIGH_RISK_WARNING notifications for each recipient
+            recipients = set(admin_ids)
+            if uploader_id:
+                recipients.add(uploader_id)
+            if not recipients:
+                recipients = {None}
+
             for notif in notifications_to_save:
-                cursor.execute(
-                    """INSERT IGNORE INTO notifications 
-                       (upload_id, station_code, station_name, state, severity, input_month, forecast_month, 
-                        predicted_wqi, predicted_do, predicted_ph, predicted_bod, hotspot_level, message) 
-                       VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
-                    (notif["upload_id"], notif["station_code"], notif["station_name"], notif["state"],
-                     notif["severity"], notif["input_month"], notif["forecast_month"],
-                     notif["predicted_wqi"], notif["predicted_do"], notif["predicted_ph"], notif["predicted_bod"],
-                     notif["hotspot_level"], notif["message"]),
-                )
+                for r_id in recipients:
+                    cursor.execute(
+                        """INSERT IGNORE INTO notifications 
+                           (upload_id, recipient_user_id, notification_type, title, station_code, station_name, state, severity, 
+                            input_month, forecast_month, predicted_wqi, predicted_do, predicted_ph, predicted_bod, 
+                            hotspot_level, message, is_read) 
+                           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,FALSE)""",
+                        (notif["upload_id"], r_id, notif["notification_type"], notif["title"], notif["station_code"], notif["station_name"], notif["state"],
+                         notif["severity"], notif["input_month"], notif["forecast_month"],
+                         notif["predicted_wqi"], notif["predicted_do"], notif["predicted_ph"], notif["predicted_bod"],
+                         notif["hotspot_level"], notif["message"]),
+                    )
         connection.commit()
 
     try:
@@ -1200,6 +1289,471 @@ def mark_all_notifications_read():
             cursor.execute("UPDATE notifications SET is_read=TRUE WHERE is_read=FALSE")
         connection.commit()
         return jsonify({"status": "read"})
+    finally:
+        connection.close()
+
+
+# ==========================================
+# ADMIN API ENDPOINTS (PROTECTED BY @admin_required)
+# ==========================================
+
+@app.get("/api/admin/summary")
+@admin_required
+def admin_summary():
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT COUNT(*) AS total_users FROM users")
+            total_users = cursor.fetchone()["total_users"]
+            cursor.execute("SELECT COUNT(*) AS active_users FROM users WHERE COALESCE(status, 'active') = 'active'")
+            active_users = cursor.fetchone()["active_users"]
+            cursor.execute("SELECT COUNT(*) AS total_alerts FROM notifications WHERE severity IN ('High Risk', 'Warning') OR notification_type = 'HIGH_RISK_WARNING'")
+            total_alerts = cursor.fetchone()["total_alerts"]
+            cursor.execute("SELECT COUNT(*) AS recent_uploads FROM live_uploads")
+            recent_uploads = cursor.fetchone()["recent_uploads"]
+            return jsonify({
+                "total_users": total_users,
+                "active_users": active_users,
+                "total_alerts": total_alerts,
+                "recent_uploads": recent_uploads,
+            })
+    finally:
+        connection.close()
+
+
+@app.get("/api/admin/users")
+@admin_required
+def admin_get_users():
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "SELECT user_id, full_name, email, mobile, role, COALESCE(status, 'active') AS status, created_at FROM users ORDER BY created_at DESC"
+            )
+            users = cursor.fetchall()
+            df = pd.DataFrame(users) if users else pd.DataFrame(columns=["user_id", "full_name", "email", "mobile", "role", "status", "created_at"])
+            return jsonify(records(df))
+    finally:
+        connection.close()
+
+
+@app.post("/api/admin/users")
+@admin_required
+def admin_create_user():
+    payload = request.get_json(silent=True) or {}
+    full_name = str(payload.get("full_name", "")).strip()
+    email = str(payload.get("email", "")).strip().lower()
+    mobile = str(payload.get("mobile", "")).strip() or None
+    password = str(payload.get("password", ""))
+    role = str(payload.get("role", "user")).strip().lower()
+    status = str(payload.get("status", "active")).strip().lower()
+
+    if not full_name or len(full_name) > 120:
+        return jsonify({"error": "Enter a valid full name."}), 400
+    if "@" not in email or len(email) > 255:
+        return jsonify({"error": "Enter a valid email address."}), 400
+    if len(password) < 8:
+        return jsonify({"error": "Password must be at least 8 characters."}), 400
+    if role not in ["admin", "user"]:
+        return jsonify({"error": "Role must be either 'admin' or 'user'."}), 400
+    if status not in ["active", "inactive"]:
+        status = "active"
+
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT user_id FROM users WHERE email=%s", (email,))
+            if cursor.fetchone():
+                return jsonify({"error": "An account with this email already exists."}), 409
+            cursor.execute(
+                "INSERT INTO users (full_name, email, mobile, password_hash, role, status) VALUES (%s, %s, %s, %s, %s, %s)",
+                (full_name, email, mobile, generate_password_hash(password), role, status),
+            )
+            new_id = cursor.lastrowid
+        connection.commit()
+        return jsonify({"status": "success", "user_id": new_id, "message": "User created successfully."}), 201
+    finally:
+        connection.close()
+
+
+@app.put("/api/admin/users/<int:user_id>")
+@admin_required
+def admin_update_user(user_id):
+    current_admin = session.get("user")
+    payload = request.get_json(silent=True) or {}
+    full_name = str(payload.get("full_name", "")).strip()
+    email = str(payload.get("email", "")).strip().lower()
+    mobile = str(payload.get("mobile", "")).strip() or None
+    role = str(payload.get("role", "")).strip().lower()
+    status = str(payload.get("status", "")).strip().lower()
+    password = str(payload.get("password", ""))
+
+    if not full_name:
+        return jsonify({"error": "Full name cannot be empty."}), 400
+    if "@" not in email:
+        return jsonify({"error": "Valid email is required."}), 400
+    if role and role not in ["admin", "user"]:
+        return jsonify({"error": "Role must be 'admin' or 'user'."}), 400
+    if status and status not in ["active", "inactive"]:
+        return jsonify({"error": "Status must be 'active' or 'inactive'."}), 400
+
+    if current_admin and current_admin.get("user_id") == user_id and role == "user":
+        return jsonify({"error": "You cannot demote your own admin account."}), 400
+
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT user_id FROM users WHERE email=%s AND user_id != %s", (email, user_id))
+            if cursor.fetchone():
+                return jsonify({"error": "Another user with this email already exists."}), 409
+
+            if password and len(password) >= 8:
+                cursor.execute(
+                    "UPDATE users SET full_name=%s, email=%s, mobile=%s, role=%s, status=%s, password_hash=%s WHERE user_id=%s",
+                    (full_name, email, mobile, role, status, generate_password_hash(password), user_id),
+                )
+            else:
+                cursor.execute(
+                    "UPDATE users SET full_name=%s, email=%s, mobile=%s, role=%s, status=%s WHERE user_id=%s",
+                    (full_name, email, mobile, role, status, user_id),
+                )
+        connection.commit()
+        return jsonify({"status": "success", "message": "User updated successfully."})
+    finally:
+        connection.close()
+
+
+@app.put("/api/admin/users/<int:user_id>/status")
+@admin_required
+def admin_toggle_user_status(user_id):
+    current_admin = session.get("user")
+    if current_admin and current_admin.get("user_id") == user_id:
+        return jsonify({"error": "You cannot deactivate your own admin account."}), 400
+
+    payload = request.get_json(silent=True) or {}
+    new_status = payload.get("status")
+
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            if not new_status:
+                cursor.execute("SELECT status FROM users WHERE user_id=%s", (user_id,))
+                row = cursor.fetchone()
+                if not row:
+                    return jsonify({"error": "User not found."}), 404
+                curr = row.get("status") or "active"
+                new_status = "inactive" if curr == "active" else "active"
+            elif new_status not in ["active", "inactive"]:
+                return jsonify({"error": "Status must be 'active' or 'inactive'."}), 400
+
+            cursor.execute("UPDATE users SET status=%s WHERE user_id=%s", (new_status, user_id))
+        connection.commit()
+        return jsonify({"status": "success", "new_status": new_status, "message": f"User status set to {new_status}."})
+    finally:
+        connection.close()
+
+
+@app.delete("/api/admin/users/<int:user_id>")
+@admin_required
+def admin_delete_user(user_id):
+    current_admin = session.get("user")
+    if current_admin and current_admin.get("user_id") == user_id:
+        return jsonify({"error": "You cannot delete your own admin account."}), 400
+
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("DELETE FROM users WHERE user_id=%s", (user_id,))
+        connection.commit()
+        return jsonify({"status": "success", "message": "User deleted successfully."})
+    finally:
+        connection.close()
+
+
+@app.get("/api/admin/datasets")
+@admin_required
+def admin_get_datasets():
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("""
+                SELECT 
+                    upload_id AS id,
+                    filename AS file_name,
+                    COALESCE(uploaded_by, 'System') AS uploaded_by,
+                    created_at AS upload_date,
+                    COALESCE(record_count, stations_processed) AS record_count,
+                    COALESCE(status, 'Completed') AS status,
+                    created_at,
+                    stations_processed,
+                    average_wqi,
+                    warnings,
+                    high_hotspots,
+                    input_month,
+                    input_year,
+                    forecast_month,
+                    forecast_year
+                FROM live_uploads
+                ORDER BY created_at DESC
+            """)
+            datasets = cursor.fetchall()
+            df = pd.DataFrame(datasets) if datasets else pd.DataFrame(columns=["id", "file_name", "uploaded_by", "upload_date", "record_count", "status", "created_at"])
+            return jsonify(records(df))
+    finally:
+        connection.close()
+
+
+@app.delete("/api/admin/datasets/<dataset_id>")
+@admin_required
+def admin_delete_dataset(dataset_id):
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT upload_id, filename FROM live_uploads WHERE upload_id=%s", (dataset_id,))
+            target = cursor.fetchone()
+            if not target:
+                return jsonify({"error": "Dataset not found."}), 404
+            cursor.execute("DELETE FROM live_uploads WHERE upload_id=%s", (dataset_id,))
+        connection.commit()
+        return jsonify({"status": "success", "message": f"Dataset {target['filename']} removed successfully."})
+    finally:
+        connection.close()
+
+
+@app.get("/api/admin/notifications")
+@admin_required
+def admin_get_notifications():
+    current_admin = session.get("user")
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("""
+                SELECT 
+                    notification_id AS id,
+                    notification_id,
+                    recipient_user_id,
+                    COALESCE(notification_type, 'HIGH_RISK_WARNING') AS notification_type,
+                    COALESCE(title, 'Water Quality Alert') AS title,
+                    message,
+                    station_code,
+                    station_name,
+                    state,
+                    severity,
+                    input_month,
+                    forecast_month,
+                    predicted_wqi,
+                    predicted_do,
+                    predicted_ph,
+                    predicted_bod,
+                    hotspot_level,
+                    is_read,
+                    read_at,
+                    created_at
+                FROM notifications
+                WHERE (recipient_user_id = %s OR recipient_user_id IS NULL)
+                  AND notification_type != 'USER_UPLOAD'
+                  AND severity != 'Warning'
+                  AND message NOT LIKE '%%Warning Alert%%'
+                  AND message NOT LIKE '%%exceeds CPCB reference criteria%%'
+                ORDER BY created_at DESC
+                LIMIT 150
+            """, (current_admin["user_id"],))
+            notifs = cursor.fetchall()
+            df = pd.DataFrame(notifs) if notifs else pd.DataFrame(columns=["id", "title", "message", "notification_type", "severity", "is_read", "created_at"])
+            return jsonify(records(df))
+    finally:
+        connection.close()
+
+
+@app.put("/api/admin/notifications/<int:notification_id>/read")
+@admin_required
+def admin_mark_notification_read(notification_id):
+    current_admin = session.get("user")
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "UPDATE notifications SET is_read=TRUE, read_at=CURRENT_TIMESTAMP WHERE notification_id=%s AND (recipient_user_id=%s OR recipient_user_id IS NULL)",
+                (notification_id, current_admin["user_id"]),
+            )
+        connection.commit()
+        return jsonify({"status": "read", "message": "Notification marked as read."})
+    finally:
+        connection.close()
+
+
+@app.put("/api/admin/notifications/read-all")
+@admin_required
+def admin_mark_all_notifications_read():
+    current_admin = session.get("user")
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "UPDATE notifications SET is_read=TRUE, read_at=CURRENT_TIMESTAMP WHERE (recipient_user_id=%s OR recipient_user_id IS NULL) AND is_read=FALSE",
+                (current_admin["user_id"],),
+            )
+        connection.commit()
+        return jsonify({"status": "read", "message": "All notifications marked as read."})
+    finally:
+        connection.close()
+
+
+@app.post("/api/admin/notifications/system")
+@admin_required
+def admin_create_system_message():
+    payload = request.get_json(silent=True) or {}
+    title = str(payload.get("title", "System Message")).strip() or "System Message"
+    message = str(payload.get("message", "")).strip()
+    severity = str(payload.get("severity", "Info")).strip() or "Info"
+
+    if not message:
+        return jsonify({"error": "Message content is required."}), 400
+
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "INSERT INTO notifications (recipient_user_id, notification_type, title, message, severity, is_read) VALUES (NULL, 'SYSTEM_MESSAGE', %s, %s, %s, FALSE)",
+                (title, message, severity),
+            )
+        connection.commit()
+        return jsonify({"status": "success", "message": "System notification broadcasted."}), 201
+    finally:
+        connection.close()
+
+
+@app.get("/api/admin/user-folders")
+@admin_required
+def admin_get_user_folders():
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT user_id, full_name, email, role, COALESCE(status, 'active') AS status, created_at FROM users ORDER BY created_at DESC")
+            users = cursor.fetchall()
+
+            cursor.execute("""
+                SELECT upload_id, filename, uploaded_by, input_year, input_month, forecast_year, forecast_month, 
+                       stations_processed, average_wqi, warnings, high_hotspots, COALESCE(record_count, stations_processed) AS record_count,
+                       COALESCE(status, 'Completed') AS status, created_at 
+                FROM live_uploads ORDER BY created_at DESC
+            """)
+            all_uploads = cursor.fetchall()
+
+            user_folders = []
+            for u in users:
+                user_name = u["full_name"]
+                user_email = u["email"]
+                user_files = [
+                    upl for upl in all_uploads 
+                    if str(upl.get("uploaded_by", "")).lower() in [user_name.lower(), user_email.lower()]
+                ]
+                total_records = sum(int(f.get("record_count") or 0) for f in user_files)
+                user_folders.append({
+                    "user_id": u["user_id"],
+                    "folder_name": f"{user_name.replace(' ', '_').lower()}_{u['user_id']}",
+                    "full_name": user_name,
+                    "email": user_email,
+                    "role": u["role"],
+                    "status": u["status"],
+                    "member_since": u["created_at"],
+                    "file_count": len(user_files),
+                    "total_records": total_records,
+                    "files": records(pd.DataFrame(user_files) if user_files else pd.DataFrame(columns=["upload_id", "filename", "created_at", "record_count", "status"])),
+                })
+
+            assigned_filenames = {f["upload_id"] for uf in user_folders for f in uf["files"]}
+            system_files = [upl for upl in all_uploads if upl["upload_id"] not in assigned_filenames]
+            if system_files:
+                user_folders.append({
+                    "user_id": 0,
+                    "folder_name": "system_and_shared_uploads",
+                    "full_name": "System & Legacy Data",
+                    "email": "system@gangawatch.gov.in",
+                    "role": "system",
+                    "status": "active",
+                    "member_since": None,
+                    "file_count": len(system_files),
+                    "total_records": sum(int(f.get("record_count") or 0) for f in system_files),
+                    "files": records(pd.DataFrame(system_files)),
+                })
+
+            return jsonify(user_folders)
+    finally:
+        connection.close()
+
+
+@app.get("/api/admin/system-messages")
+@admin_required
+def admin_get_system_messages():
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("""
+                SELECT 
+                    notification_id AS id,
+                    title,
+                    message,
+                    severity,
+                    created_at,
+                    is_read
+                FROM notifications
+                WHERE notification_type = 'SYSTEM_MESSAGE'
+                ORDER BY created_at DESC
+            """)
+            rows = cursor.fetchall()
+            df = pd.DataFrame(rows) if rows else pd.DataFrame(columns=["id", "title", "message", "severity", "created_at", "is_read"])
+            return jsonify(records(df))
+    finally:
+        connection.close()
+
+
+@app.delete("/api/admin/system-messages/<int:msg_id>")
+@admin_required
+def admin_delete_system_message(msg_id):
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("DELETE FROM notifications WHERE notification_id=%s AND notification_type='SYSTEM_MESSAGE'", (msg_id,))
+        connection.commit()
+        return jsonify({"status": "success", "message": "System message deleted."})
+    finally:
+        connection.close()
+
+
+@app.get("/api/admin/database/overview")
+@admin_required
+def admin_get_database_overview():
+    connection = mysql_connection()
+    try:
+        with connection.cursor() as cursor:
+            table_stats = []
+            tables = [
+                ("users", "User Credentials & Roles"),
+                ("stations", "Ganga Monitoring Stations Master"),
+                ("historical_water_quality", "Historical Water Quality Records"),
+                ("forecast_2026", "iTransformer 2026 Forecast Outputs"),
+                ("wqi_predictions", "Predicted Water Quality Index Values"),
+                ("hotspot_analysis", "CPCB Hotspot Classifications"),
+                ("live_uploads", "User & Live Dataset Uploads"),
+                ("live_input_data", "Uploaded Observation Records"),
+                ("live_predictions", "Generated Live Predictions"),
+                ("notifications", "System & Forecast Alert Notifications"),
+            ]
+            for tbl, desc in tables:
+                try:
+                    cursor.execute(f"SELECT COUNT(*) AS c FROM `{tbl}`")
+                    cnt = cursor.fetchone()["c"]
+                    table_stats.append({"table_name": tbl, "description": desc, "row_count": cnt})
+                except Exception:
+                    pass
+
+            return jsonify({
+                "database_name": os.getenv("MYSQL_DATABASE", "ganga_water_quality"),
+                "host": os.getenv("MYSQL_HOST", "localhost"),
+                "port": int(os.getenv("MYSQL_PORT", 3306)),
+                "tables": table_stats,
+            })
     finally:
         connection.close()
 
